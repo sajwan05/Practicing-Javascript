@@ -2725,18 +2725,47 @@ const contacts = [
 
 // Looping through collection with a for loop
 
-const cats = ["Leopard","Serval", "Jaguar", "Tiger", "Carcal", "Lion"
-];
+// const cats = ["Leopard","Serval", "Jaguar", "Tiger", "Carcal", "Lion"
+// ];
+
+// for (let i = 0; i < cats.length; i++){
+//     console.log(cats[i]);
+// }
+
+// // looping with for...of loop 
+
+// for (const cat of cats) {
+//     console.log(cat);
+// }
+
+const cats = ["Pete", "Biggles", "Jasmine"];
+
+let myFavoriteCats = "My cats are called ";
+
+for (const cat of cats){
+    myFavoriteCats += `${cat}, `;
+
+}
+
+console.log(myFavoriteCats);
+
+// We want to iterate last item little bit differentely 
+//  so it should look like following:
+// My cats are called Pete, Biggles, and Jasmine.
+
+let myFavCats = "My cats are called ";
 
 for (let i = 0; i < cats.length; i++){
-    console.log(cats[i]);
+    if (i === cats.length - 1) {
+        cats[i] = `and ${cats[i]}.`
+    }else {
+        cats[i] = `${cats[i]},`;
+    }
+
+    myFavCats += `${cats[i]}`;
 }
 
-// looping with for...of loop 
-
-for (const cat of cats) {
-    console.log(cat);
-}
+console.log(myFavCats);
 
 
 
