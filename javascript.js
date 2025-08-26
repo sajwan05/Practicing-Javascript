@@ -2795,42 +2795,107 @@
 // Say we wanted to search through an array of contacts and telephone numbers and return just the number we wanted to find?
 
 
-const contacts = [
-    "Chris:2232322",
-    "Sarah:3453456",
-    "Bill:7654322",
-    "Bulbul:9865735241",
-    "Gaur:8218224752",
-    "Ajju:9837254635",
-    "Khanduri:9537712318",
-    "Tiwari:9065432716",
-    "Ankita:897463279",
-    "Mangtho:6789046532",
-    "mumma:8064738921",
-    "co-founder:7654362512",
-    "ca:64738202983",
-    "landy:7890543623",
-];
+// const contacts = [
+//     "Chris:2232322",
+//     "Sarah:3453456",
+//     "Bill:7654322",
+//     "Bulbul:9865735241",
+//     "Gaur:8218224752",
+//     "Ajju:9837254635",
+//     "Khanduri:9537712318",
+//     "Tiwari:9065432716",
+//     "Ankita:897463279",
+//     "Mangtho:6789046532",
+//     "mumma:8064738921",
+//     "co-founder:7654362512",
+//     "ca:64738202983",
+//     "landy:7890543623",
+// ];
 
-const input = document.querySelector("input");
+// const input = document.querySelector("input");
+// const p = document.querySelector("p");
+// const btn = document.querySelector("button");
+
+// btn.addEventListener("click", () => {
+//     const searchName = input.value.toLowerCase();
+//     input.value = "";
+//     input.focus();
+
+//     p.textContent = "";
+
+//     for (const contact of contacts) {
+//         const splitContact = contact.split(":");
+//         if (splitContact[0].toLowerCase() === searchName){
+//             p.textContent = `${splitContact[0]}'s number is ${splitContact[1]}.`;
+//             break;
+//         }
+//     }
+//     if (p.textContent === ""){
+//         p.textContent = `Number not found!`;
+//     }
+// })
+
+// Without peeking
+
+// const contacts = [
+//     "Chris:2232322",
+//     "Sarah:3453456",
+//     "Bill:7654322",
+//     "Bulbul:9865735241",
+//     "Gaur:8218224752",
+//     "Ajju:9837254635",
+//     "Khanduri:9537712318",
+//     "Tiwari:9065432716",
+//     "Ankita:897463279",
+//     "Mangtho:6789046532",
+//     "mumma:8064738921",
+//     "co-founder:7654362512",
+//     "ca:64738202983",
+//     "landy:7890543623",
+//     "cto:765846373",
+//     "mentor:8975653292",
+// ];
+
+// const para = document.querySelector("p");
+// const input = document.querySelector("input");
+// const btn = document.querySelector("button");
+
+// btn.addEventListener("click", ()=> {
+//     const searchName = input.value.toLowerCase();
+//     input.value = "";
+//     input.focus();
+//     para.textContent = "";
+
+//     for (const contact of contacts) {
+//         const splitContact = contact.split(":");
+//         if (splitContact[0].toLowerCase() === searchName) {
+//             para.textContent = `${splitContact[0]}'s contact number is ${splitContact[1]}`;
+//             break;
+//         }
+//     }
+//     if(para.textContent === ""){
+//         para.textContent = `Contact not found!`;
+//     }
+// });
+
 const p = document.querySelector("p");
+const input = document.querySelector("input");
 const btn = document.querySelector("button");
 
 btn.addEventListener("click", () => {
-    const searchName = input.value.toLowerCase();
+    p.textContent = "Output: ";
+    const num = input.value;
     input.value = "";
+
     input.focus();
 
-    p.textContent = "";
-
-    for (const contact of contacts) {
-        const splitContact = contact.split(":");
-        if (splitContact[0].toLowerCase() === searchName){
-            p.textContent = `${splitContact[0]}'s number is ${splitContact[1]}.`;
-            break;
+    for (let i = 1; i <= num; i++) {
+        let sqroot = Math.sqrt(i);
+        if (Math.floor(sqroot) !== sqroot ){
+            continue;
         }
+        p.textContent += `${i} `;
     }
-    if (p.textContent === ""){
-        p.textContent = `Number not found!`;
-    }
-})
+
+
+});
