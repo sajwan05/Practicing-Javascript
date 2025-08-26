@@ -2704,24 +2704,40 @@ const contacts = [
 // (results.textContent = ""));
 
 
-const results = document.querySelector("#results");
-const num = parseInt(prompt("Enter a number: "));
-function calculate () {
-    for (let i = 1; i <= num; i++){
-        let newResult = `${i} * ${i} = ${i * i}`;
-        results.textContent += `${newResult}\n`;
-    }
-    results.textContent += "\nFinished\n\n";
+// const results = document.querySelector("#results");
+// const num = parseInt(prompt("Enter a number: "));
+// function calculate () {
+//     for (let i = 1; i <= num; i++){
+//         let newResult = `${i} * ${i} = ${i * i}`;
+//         results.textContent += `${newResult}\n`;
+//     }
+//     results.textContent += "\nFinished\n\n";
+// }
+
+// const calculated = document.querySelector("#calculate");
+// const clear = document.querySelector("#clear");
+
+// calculated.addEventListener("click", calculate);
+
+// clear.addEventListener("click", () =>
+//     results.textContent = ""
+// );
+
+// Looping through collection with a for loop
+
+const cats = ["Leopard","Serval", "Jaguar", "Tiger", "Carcal", "Lion"
+];
+
+for (let i = 0; i < cats.length; i++){
+    console.log(cats[i]);
 }
 
-const calculated = document.querySelector("#calculate");
-const clear = document.querySelector("#clear");
+// looping with for...of loop 
 
-calculated.addEventListener("click", calculate);
+for (const cat of cats) {
+    console.log(cat);
+}
 
-clear.addEventListener("click", () =>
-    results.textContent = ""
-);
 
 
 
