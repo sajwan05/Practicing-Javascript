@@ -2644,12 +2644,84 @@ const contacts = [
 
 // console.log(square(12));
 
-const cats = ["Leopard", "Serval", "Jaguar", "Tiger", "Caracal", "Lion"];
+// const cats = ["Leopard", "Serval", "Jaguar", "Tiger", "Caracal", "Lion"];
 
-for (const cat of cats){
-    console.log(cat);
+// for (const cat of cats){
+//     console.log(cat);
+// }
+
+// function toUpper(string) {
+//     return string.toUpperCase();
+// }
+
+// const cats = ["Leopard", "Serval", "Jaguar", "Tiger", "Carcal", "Lion"];
+
+// const upperCats = cats.map(toUpper);
+
+// console.log(upperCats);
+
+// console.log(cats);
+
+// function lCat(cat) {
+//     return cat.startsWith("L");
+// }
+
+// const filtered = cats.filter(lCat);
+
+// console.log(filtered);
+
+// Calculating squares till given number:
+
+// proompt user for a number till where you want to fing squares
+
+// Then loop from 1 to that given number 
+
+// every time you loop use counter * counter and increment it by one
+
+// const number = parseInt(prompt("Enter a number: "));
+
+// for (let i = 1; i <= number; i++) {
+//     console.log(`Square of ${i} is ${i*i}`);
+// }
+
+// const results = document.querySelector("#results");
+
+// function calculate () {
+//     for (let i = 1; i <= 10; i++){
+//         const newResult = `${i} * ${i} = ${i * i}`;
+//         results.textContent += `${newResult}\n`;
+//     }
+
+//     results.textContent += "\nFinished\n\n";
+// }
+
+// const calculateBtn = document.querySelector("#calculate");
+
+// const clearBtn = document.querySelector("#clear");
+
+// calculateBtn.addEventListener("click", calculate);
+// clearBtn.addEventListener("click", () =>
+// (results.textContent = ""));
+
+
+const results = document.querySelector("#results");
+const num = parseInt(prompt("Enter a number: "));
+function calculate () {
+    for (let i = 1; i <= num; i++){
+        let newResult = `${i} * ${i} = ${i * i}`;
+        results.textContent += `${newResult}\n`;
+    }
+    results.textContent += "\nFinished\n\n";
 }
 
+const calculated = document.querySelector("#calculate");
+const clear = document.querySelector("#clear");
+
+calculated.addEventListener("click", calculate);
+
+clear.addEventListener("click", () =>
+    results.textContent = ""
+);
 
 
 
