@@ -2307,14 +2307,6 @@
 // });
 
 
-const contacts = [
-    "Suraj:9759269703",
-    "mumma:7017821957",
-    "Prisha:9657483425",
-    "Gaurav:9758252299",
-    "Landy:7456877123",
-    "Mangtho:8765473212",
-];
 
 // btn.addEventListener("click", () => {
 //     const searchName = input.value.toLowerCase();
@@ -2738,35 +2730,107 @@ const contacts = [
 //     console.log(cat);
 // }
 
-const cats = ["Pete", "Biggles", "Jasmine"];
+// const cats = ["Pete", "Biggles", "Jasmine"];
 
-let myFavoriteCats = "My cats are called ";
+// let myFavoriteCats = "My cats are called ";
 
-for (const cat of cats){
-    myFavoriteCats += `${cat}, `;
+// for (const cat of cats){
+//     myFavoriteCats += `${cat}, `;
 
-}
+// }
 
-console.log(myFavoriteCats);
+// console.log(myFavoriteCats);
 
-// We want to iterate last item little bit differentely 
-//  so it should look like following:
-// My cats are called Pete, Biggles, and Jasmine.
+// // We want to iterate last item little bit differentely 
+// //  so it should look like following:
+// // My cats are called Pete, Biggles, and Jasmine.
 
-let myFavCats = "My cats are called ";
+// let myFavCats = "My cats are called ";
 
-for (let i = 0; i < cats.length; i++){
-    if (i === cats.length - 1) {
-        cats[i] = `and ${cats[i]}.`
-    }else {
-        cats[i] = `${cats[i]},`;
+// for (let i = 0; i < cats.length; i++){
+//     if (i === cats.length - 1) {
+//         cats[i] = `and ${cats[i]}.`
+//     }else {
+//         cats[i] = `${cats[i]},`;
+//     }
+
+//     myFavCats += `${cats[i]}`;
+// }
+
+// console.log(myFavCats);
+
+
+// Exiting loops with break:
+
+
+
+
+
+
+// const para = document.querySelector("p");
+// const input = document.querySelector("input");
+
+// const btn = document.querySelector("button");
+
+// btn.addEventListener('click', () => {
+//     const searchName = input.value.toLowerCase();
+//     input.value = "";
+//     input.focus();
+
+//     para.textContent = "";
+
+//     for(const contact of contacts) {
+//         const splitContact = contact.split(":");
+//         if(splitContact[0].toLowerCase() === searchName) {
+//             para.textContent = `${splitContact[0]}'s number is ${splitContact[1]}.`;
+//             break;
+//         }
+//     }
+
+//     if(para.textContent === ""){
+//         para.textContent = "Contact can not be found.";
+//     }
+// });
+
+// Say we wanted to search through an array of contacts and telephone numbers and return just the number we wanted to find?
+
+
+const contacts = [
+    "Chris:2232322",
+    "Sarah:3453456",
+    "Bill:7654322",
+    "Bulbul:9865735241",
+    "Gaur:8218224752",
+    "Ajju:9837254635",
+    "Khanduri:9537712318",
+    "Tiwari:9065432716",
+    "Ankita:897463279",
+    "Mangtho:6789046532",
+    "mumma:8064738921",
+    "co-founder:7654362512",
+    "ca:64738202983",
+    "landy:7890543623",
+];
+
+const input = document.querySelector("input");
+const p = document.querySelector("p");
+const btn = document.querySelector("button");
+
+btn.addEventListener("click", () => {
+    const searchName = input.value.toLowerCase();
+    input.value = "";
+    input.focus();
+
+    p.textContent = "";
+
+    for (const contact of contacts) {
+        const splitContact = contact.split(":");
+        if (splitContact[0].toLowerCase() === searchName){
+            p.textContent = `${splitContact[0]}'s number is ${splitContact[1]}.`;
+            break;
+        }
     }
-
-    myFavCats += `${cats[i]}`;
-}
-
-console.log(myFavCats);
-
-
-
-
+    if (p.textContent === ""){
+        p.textContent = `Number not found!`;
+    }
+})
