@@ -3063,11 +3063,120 @@ let myFavCats = "My cats are called ";
 
 // output the prime number :
 
-outer:for (let i = 2; i <= 30; i++){
-    for (let j = 2; j < i ; j++){
-        if(i % j === 0){
-            continue outer;
-        }
-    }
-    console.log(i);
-}
+// outer:for (let i = 2; i <= 30; i++){
+//     for (let j = 2; j < i ; j++){
+//         if(i % j === 0){
+//             continue outer;
+//         }
+//     }
+//     console.log(i);
+// }
+
+// Declaration of arrays:
+// let arr = new Array();
+// let arr1 = [];
+// console.log(arr);
+// console.log(arr1);
+
+// const fruits = ["Apple", "Orange", "Plum"];
+
+// console.log(fruits[0]);
+// console.log(fruits[1]);
+// console.log(fruits[2]);
+// console.log(fruits[3]);
+// console.log(fruits[fruits.length -1]);
+
+// fruits[fruits.length - 1 ] = "Pear";
+
+// console.log(fruits);
+// console.log(fruits.length);
+
+// fruits[fruits.length] = "Lemon";
+
+// console.log(fruits);
+
+
+// // Array can store element of any type:
+// // mix of values
+
+// let mixArr = ["Apple", {name:"John"}, true, function() {console.log("Hello");}];
+
+// console.log(mixArr[1].name);
+// console.log(mixArr[3]());
+
+
+// Trailing comma
+
+// let fruits = [
+//     "Apple",
+//     "Orange",
+//     "Plum",
+// ]
+
+// const lastElement = fruits[fruits.length - 1];
+
+// console.log(lastElement);
+
+// console.log(fruits.at(-1));
+
+
+
+// Methods like pop/push/shift/unshift
+
+// shift<-[]<-push  ---> queue
+// stack is usually illustrated as pack of cards  push and pop
+
+// In javascript arrays work both as a queue and as a stack. They allow you to add/remove elements, both to/from the beginning or the end.
+
+// In computer science , the data structure that allows this, is called deque
+
+const fruits = ["Apple", "Orange", "Plum"];
+
+fruits[fruits.length -1] = "Pear";
+
+console.log(fruits);
+
+// pop 
+// Extracts the last element of the array and returns it:
+
+const popped = fruits.pop();
+
+console.log(fruits);
+console.log(popped);
+fruits.push(popped);
+
+console.log(fruits)
+console.log(fruits.pop());
+console.log(fruits);
+
+// push 
+// Append the element to the end of the array:
+
+fruits.push(popped);
+console.log(fruits);
+
+// shift
+// Extract the first element of the array and returns it:
+
+const shift = fruits.shift();
+
+console.log(fruits);
+
+console.log(shift);
+
+// unshift 
+// Add the element to the beginning of the array
+
+console.log(fruits.unshift(shift));
+console.log(fruits);
+
+// Methods push and unshift can add multiple elements at once:
+
+let fruit  = ["Apple"];
+console.log(fruit);
+
+fruit.push("Orange", "Peach");
+console.log(fruit);
+fruit.unshift("Pineapple", "Lemon");
+
+console.log(fruit);
