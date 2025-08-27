@@ -2878,24 +2878,196 @@
 //     }
 // });
 
-const p = document.querySelector("p");
-const input = document.querySelector("input");
-const btn = document.querySelector("button");
+// const p = document.querySelector("p");
+// const input = document.querySelector("input");
+// const btn = document.querySelector("button");
 
-btn.addEventListener("click", () => {
-    p.textContent = "Output: ";
-    const num = input.value;
-    input.value = "";
+// btn.addEventListener("click", () => {
+//     p.textContent = "Output: ";
+//     const num = input.value;
+//     input.value = "";
 
-    input.focus();
+//     input.focus();
 
-    for (let i = 1; i <= num; i++) {
-        let sqroot = Math.sqrt(i);
-        if (Math.floor(sqroot) !== sqroot ){
-            continue;
+//     for (let i = 1; i <= num; i++) {
+//         let sqroot = Math.sqrt(i);
+//         if (Math.floor(sqroot) !== sqroot ){
+//             continue;
+//         }
+//         p.textContent += `${i} `;
+//     }
+
+
+// });
+
+
+// While 
+
+const cats = ["Pete", "Biggles", "Jasmine"];
+
+let myFavCats = "My cats are called ";
+
+// let i = 0;
+
+// while (i < cats.length) {
+//     if (i === cats.length -1) {
+//         myFavCats += `and ${cats[i]}.`;
+//     }else {
+//         myFavCats += `${cats[i]}, `
+//     }
+
+//     i++;
+// }
+
+// console.log(myFavCats);
+
+// let i = 0;
+
+// do {
+//     if (i === cats.length - 1){
+//         myFavCats += `and ${cats[i]}.`
+//     }else {
+//         myFavCats += `${cats[i]}, `
+//     }
+//     i++;
+// }while(i < cats.length);
+
+// console.log(myFavCats);
+// let number = 100;
+// while (number <= 100 && number){
+//     number = parseInt(prompt("Enter a number: "));
+// }
+
+
+// Prime numbers :
+// let n = 16;
+// for (let i = 2; i <= n; i++){
+//     if (i === 2) {
+//         console.log(`${i} is prime`);
+//     }else if (i % 2 === 0){
+//         console.log(`${i} is not prime`);
+//     }else {
+//         // Only odds
+//         for (let j = 3; j < Math.sqrt(i); j+=2){
+//             if (j % i === 0){
+//                 console.log(`${i} is not prime`);
+//                 break;
+//             }
+//         }
+
+//     }
+// }
+
+// let n = 30;
+
+// for (let i = 2; i <= n; i++){
+//     let result = isPrime(i);
+//     if(result) {
+//         console.log(`${i} is prime`);
+//     }
+// }
+
+// function isPrime(number) {
+//     if (number === 2){
+//         return true;
+//     }else if (number % 2 === 0){
+//         return false;
+
+//     }else {
+//         for (let j = 3; j <= Math.sqrt(number); j+=2){
+//             if (number % j ===0 ){
+//                 return false;
+//             }
+//         }
+//         return true;
+//     }
+// }
+
+// initializer 
+// while(condition){
+//     // code
+//     // so called loop body
+// }
+
+// let i = 1;
+
+// while(i <= 3){
+//     console.log(i);
+//     i++;
+// }
+
+// let i = 5;
+ 
+// while(i) {
+//     console.log(i);
+//     i--;
+// }
+
+// let i = 1;
+
+// do {
+//     console.log(i);
+//     i++;
+// } while(i <= 3)
+
+// for loop
+// for (begin; condition; incrementionORfinal-expression)
+
+
+// let i = 1;
+
+// for(;i <= 3; ){
+//     console.log(i++);
+// }
+
+
+// break
+// let sum = 0;
+
+// while (true) {
+//     let value = +prompt("Enter a number:", '');
+
+//     if (!value) break;
+
+//     sum += value;
+// }
+
+// console.log(`Sum: ${sum}`);
+
+// continue to the next iteration:
+
+// for (let i = 0; i <= 10; i++){
+//     // i need all the odd numbers
+
+//     if (i % 2 === 0) continue;
+
+//     console.log(i);
+// }
+
+// let i = 5;
+
+// if (i >= 5){
+//     console.log(i);
+// }else {
+//     console.log("Can't");
+//     i++;
+//     continue;
+// }
+
+// let number;
+
+// do {
+//     number = parseInt(prompt("Please entere a number: "));
+// } while (number <= 100 && number);
+
+
+// output the prime number :
+
+outer:for (let i = 2; i <= 30; i++){
+    for (let j = 2; j < i ; j++){
+        if(i % j === 0){
+            continue outer;
         }
-        p.textContent += `${i} `;
     }
-
-
-});
+    console.log(i);
+}
