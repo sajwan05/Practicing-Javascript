@@ -3522,8 +3522,19 @@ console.log(countries);
 countries = ["Österreich", "Andora", "Vietnam"];
 console.log(countries.sort((a,b) => a > b ? 1 : -1));
 
-console.log(arr.sort((a,b) => a.localeCompare(b)));
+console.log(countries.sort( (a, b) => a.localeCompare(b) ))
 
 
+// reversig array ---> Reverse 
+
+arr = [1,4, 5, 3, 2];
+
+arr.sort( (a,b) => a > b ? 1 : - 1);
+
+console.log(arr);
+
+arr.reverse();
+
+console.log(arr);
 
 
