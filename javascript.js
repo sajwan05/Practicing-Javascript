@@ -3455,3 +3455,14 @@ let user = users.find(item => item.id === 3);
 
 console.log(user);
 
+
+// Transform an array
+
+// map:
+
+
+let arr = ['bilbo', "gandalf", "Nazgul"];
+
+let lengths = arr.map(x => x.length);
+console.log(lengths);
+
