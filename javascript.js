@@ -3379,3 +3379,25 @@ arr = [1, 2, 5];
 arr.splice(-1,0,3,4);
 
 console.log(arr);
+
+// SLICE slice():
+
+// arr.slicr([start], [end])
+
+arr = ['t', "e", "s", "t"];
+
+console.log(arr.slice(1,3)); //e ,s
+
+console.log(arr.slice(-2)); //["s", "t"];
+
+
+// arr.slice can also be used to copy the arr.
+
+// CONCAT = > arr.concat
+
+arr = [1, 2];
+console.log(arr.concat([3,4]));
+
+console.log(arr.concat([3,4], [5,6]));
+
+console.log(arr.concat([3,4],5,6));
