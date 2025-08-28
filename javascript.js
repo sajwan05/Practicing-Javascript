@@ -3130,53 +3130,107 @@ let myFavCats = "My cats are called ";
 
 // In computer science , the data structure that allows this, is called deque
 
-const fruits = ["Apple", "Orange", "Plum"];
+// const fruits = ["Apple", "Orange", "Plum"];
 
-fruits[fruits.length -1] = "Pear";
+// fruits[fruits.length -1] = "Pear";
 
-console.log(fruits);
+// console.log(fruits);
 
-// pop 
-// Extracts the last element of the array and returns it:
+// // pop 
+// // Extracts the last element of the array and returns it:
 
-const popped = fruits.pop();
+// const popped = fruits.pop();
 
-console.log(fruits);
-console.log(popped);
-fruits.push(popped);
+// console.log(fruits);
+// console.log(popped);
+// fruits.push(popped);
 
-console.log(fruits)
-console.log(fruits.pop());
-console.log(fruits);
+// console.log(fruits)
+// console.log(fruits.pop());
+// console.log(fruits);
 
-// push 
-// Append the element to the end of the array:
+// // push 
+// // Append the element to the end of the array:
 
-fruits.push(popped);
-console.log(fruits);
+// fruits.push(popped);
+// console.log(fruits);
 
-// shift
-// Extract the first element of the array and returns it:
+// // shift
+// // Extract the first element of the array and returns it:
 
-const shift = fruits.shift();
+// const shift = fruits.shift();
 
-console.log(fruits);
+// console.log(fruits);
 
-console.log(shift);
+// console.log(shift);
 
-// unshift 
-// Add the element to the beginning of the array
+// // unshift 
+// // Add the element to the beginning of the array
 
-console.log(fruits.unshift(shift));
-console.log(fruits);
+// console.log(fruits.unshift(shift));
+// console.log(fruits);
 
-// Methods push and unshift can add multiple elements at once:
+// // Methods push and unshift can add multiple elements at once:
 
-let fruit  = ["Apple"];
-console.log(fruit);
+// let fruit  = ["Apple"];
+// console.log(fruit);
 
-fruit.push("Orange", "Peach");
-console.log(fruit);
-fruit.unshift("Pineapple", "Lemon");
+// fruit.push("Orange", "Peach");
+// console.log(fruit);
+// fruit.unshift("Pineapple", "Lemon");
 
-console.log(fruit);
+// console.log(fruit);
+
+// arr[0] ---> obj[key];
+
+// arrays are copied by reference:
+
+// let fruits = ["Banana"];
+
+// let arr = fruits;
+
+// console.log(arr);
+// console.log(fruits);
+
+// console.log(fruits === arr);
+
+// arr.push("Pear");
+
+// console.log(fruits);
+// console.log(arr);
+
+
+// let fruits = [];
+// fruits[99999] = 5;
+// console.log(fruits);
+// fruits.age = 25;
+
+// console.log(fruits);
+
+
+//Performance:
+
+// Methods push/pop run fast, while shift/unshift are slow.
+
+
+// Loops
+
+let arr = ["Apple", "Orange", "Pear"];
+
+for (let i = 0; i < arr.length; i++){
+    console.log(arr[i]);
+}
+
+// But we can also use for...of loop for arrays
+
+for (const item of arr){
+    console.log(item);
+}
+
+// for..in loop 
+
+for (let key in arr) {
+    console.log(arr[key]);
+}
+
+// generally we should avoid using for...in for arrays
