@@ -3215,22 +3215,72 @@ let myFavCats = "My cats are called ";
 
 // Loops
 
-let arr = ["Apple", "Orange", "Pear"];
+// let arr = ["Apple", "Orange", "Pear"];
 
-for (let i = 0; i < arr.length; i++){
-    console.log(arr[i]);
-}
+// for (let i = 0; i < arr.length; i++){
+//     console.log(arr[i]);
+// }
 
-// But we can also use for...of loop for arrays
+// // But we can also use for...of loop for arrays
 
-for (const item of arr){
-    console.log(item);
-}
+// for (const item of arr){
+//     console.log(item);
+// }
 
-// for..in loop 
+// // for..in loop 
 
-for (let key in arr) {
-    console.log(arr[key]);
-}
+// for (let key in arr) {
+//     console.log(arr[key]);
+// }
 
 // generally we should avoid using for...in for arrays
+
+
+// new Array()
+
+let arr = new Array("Apple", "Pear", "etc");
+console.log(arr);
+arr = new Array(2);
+console.log(arr);
+
+console.log(arr[0]);
+console.log(arr.length);
+
+// Multidimensional arrays:
+
+let matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9],
+];
+
+console.log(matrix[0][1]);
+
+
+
+// toString()
+let array = [1, 2, 3];
+
+console.log(array);
+
+console.log(String(array) === '1,2,3');
+
+console.log(array.toString());
+console.log(array);
+
+console.log([] + 1);
+console.log([1] + 1);
+console.log([1, 2] + 1);
+
+console.log([0] == [0]);
+
+const fruits = ["Apple"];
+let fruit = fruits;
+
+console.log(fruit === fruits);
+
+fruit.push("Peach","Lemon");
+
+console.log(fruits);
+
+console.log(fruit === fruits)
