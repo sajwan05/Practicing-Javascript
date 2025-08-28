@@ -3440,20 +3440,20 @@ let myFavCats = "My cats are called ";
 
 // filter
 
-let users = [
-    {id: 1, name: "John"},
-    {id: 2, name: "Pete"},
-    {id: 3, name: "Mary"},
-];
+// let users = [
+//     {id: 1, name: "John"},
+//     {id: 2, name: "Pete"},
+//     {id: 3, name: "Mary"},
+// ];
 
-let someUsers = users.filter(item => item.id < 3);
+// let someUsers = users.filter(item => item.id < 3);
 
-console.log(users);
-console.log(someUsers);
+// console.log(users);
+// console.log(someUsers);
 
-let user = users.find(item => item.id === 3);
+// let user = users.find(item => item.id === 3);
 
-console.log(user);
+// console.log(user);
 
 
 // Transform an array
@@ -3461,8 +3461,69 @@ console.log(user);
 // map:
 
 
-let arr = ['bilbo', "gandalf", "Nazgul"];
+// let arr = ['bilbo', "gandalf", "Nazgul"];
 
-let lengths = arr.map(x => x.length);
-console.log(lengths);
+// let lengths = arr.map(x => x.length);
+// console.log(lengths);
+
+// let arr = ["Bilbo", "Gandalf", "Nazgul"];
+
+// const lengths = arr.map( (item) => item.length);
+
+// console.log(lengths);
+
+
+// sort function:
+
+let arr = [1, 2, 15];
+
+console.log(arr.sort());
+
+console.log(arr);
+
+arr = [2, 15, 123, 187, 56, 33, 6];
+
+arr.sort();
+console.log(arr);
+
+function compareNumeric(a, b){
+    if (a > b) return 1;
+    if ( a == b) return 0;
+    if (a < b) return -1;
+
+}
+
+arr = [1, 2, 15, 123, 0, 34, 20, 5,56, 666];
+
+arr.sort(compareNumeric);
+
+console.log(arr);
+
+arr.sort(function(a,b)
+{
+    console.log(`${a} <> ${b}`);
+    return a - b;
+});
+
+console.log(arr);
+
+
+arr = [1, 2, 15, 3, 4, 0, 5, 3, 3, 8];
+
+arr.sort((a,b) => a-b);
+
+console.log(arr);
+
+let countries = ["India", "Pakistan", "Bangladesh", "Nepal", "Bhutan", "China", "Russia","Myanmar"];
+countries.sort( (a,b)=> a > b ? 1 : -1 );
+
+console.log(countries);
+
+countries = ["Österreich", "Andora", "Vietnam"];
+console.log(countries.sort((a,b) => a > b ? 1 : -1));
+
+console.log(arr.sort((a,b) => a.localeCompare(b)));
+
+
+
 
