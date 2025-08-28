@@ -3238,13 +3238,13 @@ let myFavCats = "My cats are called ";
 
 // new Array()
 
-let arr = new Array("Apple", "Pear", "etc");
-console.log(arr);
-arr = new Array(2);
-console.log(arr);
+// let arr = new Array("Apple", "Pear", "etc");
+// console.log(arr);
+// arr = new Array(2);
+// console.log(arr);
 
-console.log(arr[0]);
-console.log(arr.length);
+// console.log(arr[0]);
+// console.log(arr.length);
 
 // Multidimensional arrays:
 
@@ -3293,14 +3293,89 @@ console.log(arr.length);
 // Don't compare arrays with == , to compare either use iteration methods or 
 
 
-const styles = ["Jazz", "Blues"];
-styles.push("Rock-n-Roll");
-styles[Math.floor((styles.length - 1 ) / 2)] = "Classics";
-const shift = styles.shift();
-console.log(shift);
+// const styles = ["Jazz", "Blues"];
+// styles.push("Rock-n-Roll");
+// styles[Math.floor((styles.length - 1 ) / 2)] = "Classics";
+// const shift = styles.shift();
+// console.log(shift);
 
 
-styles.unshift("Rap", "Reggae");
+// styles.unshift("Rap", "Reggae");
 
 
-console.log(styles);
+// console.log(styles);
+
+
+// Sum input numbers
+
+// prompt the user for values: 
+// Append those values to an array
+// exit the prompt when user enters non numeric value. NaN or string etc.
+// calculate and returns the sum of array items
+
+// let sum = 0;
+// let arr = [];
+// // let container =  [];
+// let num = 0;
+
+// function sumInput() {
+//     while(num || num === 0){
+//         num = (prompt("Enter a number or skip pressing any text"));
+//         arr.push(+num);
+//     }
+
+//     for (let i = 0; i < arr.length; i++) {
+//         sum += arr[i];
+//     }
+
+//     return sum;
+
+// }
+
+// console.log(sumInput());
+
+let arr = ["I", "go", "home"];
+console.log(arr);
+// arrays are objects, so we can try to use delete:
+
+delete arr[1];
+console.log(arr);
+console.log(arr.length);
+console.log(arr[1]);
+
+// so we have to use something else like arr.splice which is Swiss army knife for arrays
+
+arr = ["I", "Study", "JavaScript"];
+
+arr.splice(1,1);
+console.log(arr);
+
+arr = ["I", "Study", "JavaScript", "right", "now"];
+
+let removed = arr.splice(0, 3, "Let\'s", "dance");
+
+console.log(arr);
+console.log(removed);
+
+// splice method can also insert the element without any removals. For that we need to set deletcount to 0
+
+arr = ["I", "Study", "JavaScript"];
+
+arr.splice(3,0, "Which", "Is", "Weird");
+console.log(arr);
+
+arr.splice(3,3);
+
+console.log(arr);
+
+arr.splice(2,0,"Complex", "Language");
+
+console.log(arr);
+
+// Negative index are allowed:
+
+arr = [1, 2, 5];
+
+arr.splice(-1,0,3,4);
+
+console.log(arr);
