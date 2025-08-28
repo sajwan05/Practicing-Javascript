@@ -3539,24 +3539,42 @@ let myFavCats = "My cats are called ";
 
 // split and join 
 
-let names = "Landy, Khandu, Tiwari";
+// let names = "Landy, Khandu, Tiwari";
 
-const arr = names.split(", ");
+// const arr = names.split(", ");
 
-console.log(arr);
+// console.log(arr);
 
-for (const name of arr) {
-    console.log(`Hey,  ${name} you're invited in my companies IPO `);
-}
+// for (const name of arr) {
+//     console.log(`Hey,  ${name} you're invited in my companies IPO `);
+// }
 
-let str = "test";
+// let str = "test";
 
-console.log(str.split(""));
+// console.log(str.split(""));
 
-console.log(arr);
+// console.log(arr);
 
-name = arr.join(", ");
-console.log(name);
+// const identity = arr.join(", ");
+// console.log(identity);
+
+
+// reduce/ reduce right
+
+let arr = [1, 2, 3, 4, 5];
+let result = arr.reduce((sum, current) => sum + current, 0);
+
+console.log(result);
+
+const array = [];
+
+let results = array.reduce((sum, current ) => sum + current, 0);
+
+console.log(results);
+
+
+
+
 
 
 
