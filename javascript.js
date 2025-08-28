@@ -3473,68 +3473,91 @@ let myFavCats = "My cats are called ";
 // console.log(lengths);
 
 
-// sort function:
+// // sort function:
 
-let arr = [1, 2, 15];
+// let arr = [1, 2, 15];
 
-console.log(arr.sort());
+// console.log(arr.sort());
+
+// console.log(arr);
+
+// arr = [2, 15, 123, 187, 56, 33, 6];
+
+// arr.sort();
+// console.log(arr);
+
+// function compareNumeric(a, b){
+//     if (a > b) return 1;
+//     if ( a == b) return 0;
+//     if (a < b) return -1;
+
+// }
+
+// arr = [1, 2, 15, 123, 0, 34, 20, 5,56, 666];
+
+// arr.sort(compareNumeric);
+
+// console.log(arr);
+
+// arr.sort(function(a,b)
+// {
+//     console.log(`${a} <> ${b}`);
+//     return a - b;
+// });
+
+// console.log(arr);
+
+
+// arr = [1, 2, 15, 3, 4, 0, 5, 3, 3, 8];
+
+// arr.sort((a,b) => a-b);
+
+// console.log(arr);
+
+// let countries = ["India", "Pakistan", "Bangladesh", "Nepal", "Bhutan", "China", "Russia","Myanmar"];
+// countries.sort( (a,b)=> a > b ? 1 : -1 );
+
+// console.log(countries);
+
+// countries = ["Österreich", "Andora", "Vietnam"];
+// console.log(countries.sort((a,b) => a > b ? 1 : -1));
+
+// console.log(countries.sort( (a, b) => a.localeCompare(b) ))
+
+
+// // reversig array ---> Reverse 
+
+// arr = [1,4, 5, 3, 2];
+
+// arr.sort( (a,b) => a > b ? 1 : - 1);
+
+// console.log(arr);
+
+// arr.reverse();
+
+// console.log(arr);
+
+// split and join 
+
+let names = "Landy, Khandu, Tiwari";
+
+const arr = names.split(", ");
 
 console.log(arr);
 
-arr = [2, 15, 123, 187, 56, 33, 6];
-
-arr.sort();
-console.log(arr);
-
-function compareNumeric(a, b){
-    if (a > b) return 1;
-    if ( a == b) return 0;
-    if (a < b) return -1;
-
+for (const name of arr) {
+    console.log(`Hey,  ${name} you're invited in my companies IPO `);
 }
 
-arr = [1, 2, 15, 123, 0, 34, 20, 5,56, 666];
+let str = "test";
 
-arr.sort(compareNumeric);
-
-console.log(arr);
-
-arr.sort(function(a,b)
-{
-    console.log(`${a} <> ${b}`);
-    return a - b;
-});
+console.log(str.split(""));
 
 console.log(arr);
 
-
-arr = [1, 2, 15, 3, 4, 0, 5, 3, 3, 8];
-
-arr.sort((a,b) => a-b);
-
-console.log(arr);
-
-let countries = ["India", "Pakistan", "Bangladesh", "Nepal", "Bhutan", "China", "Russia","Myanmar"];
-countries.sort( (a,b)=> a > b ? 1 : -1 );
-
-console.log(countries);
-
-countries = ["Österreich", "Andora", "Vietnam"];
-console.log(countries.sort((a,b) => a > b ? 1 : -1));
-
-console.log(countries.sort( (a, b) => a.localeCompare(b) ))
+name = arr.join(", ");
+console.log(name);
 
 
-// reversig array ---> Reverse 
-
-arr = [1,4, 5, 3, 2];
-
-arr.sort( (a,b) => a > b ? 1 : - 1);
-
-console.log(arr);
-
-arr.reverse();
-
-console.log(arr);
 
 
