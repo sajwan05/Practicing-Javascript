@@ -3248,43 +3248,59 @@ console.log(arr.length);
 
 // Multidimensional arrays:
 
-let matrix = [
-    [1, 2, 3],
-    [4, 5, 6],
-    [7, 8, 9],
-];
+// let matrix = [
+//     [1, 2, 3],
+//     [4, 5, 6],
+//     [7, 8, 9],
+// ];
 
-console.log(matrix[0][1]);
+// console.log(matrix[0][1]);
 
 
 
-// toString()
-let array = [1, 2, 3];
+// // toString()
+// let array = [1, 2, 3];
 
-console.log(array);
+// console.log(array);
 
-console.log(String(array) === '1,2,3');
+// console.log(String(array) === '1,2,3');
 
-console.log(array.toString());
-console.log(array);
+// console.log(array.toString());
+// console.log(array);
 
-console.log([] + 1);
-console.log([1] + 1);
-console.log([1, 2] + 1);
+// console.log([] + 1);
+// console.log([1] + 1);
+// console.log([1, 2] + 1);
 
-console.log([0] == [0]);
+// console.log([0] == [0]);
 
-const fruits = ["Apple"];
-let fruit = fruits;
+// const fruits = ["Apple"];
+// let fruit = fruits;
 
-console.log(fruit === fruits);
+// console.log(fruit === fruits);
 
-fruit.push("Peach","Lemon");
+// fruit.push("Peach","Lemon");
 
-console.log(fruits);
+// console.log(fruits);
 
-console.log(fruit === fruits)
+// console.log(fruit === fruits)
 
-console.log(0 == []);
+// console.log(0 == []);
 
-console.log('0' == []);
+// console.log('0' == []);
+
+
+// Don't compare arrays with == , to compare either use iteration methods or 
+
+
+const styles = ["Jazz", "Blues"];
+styles.push("Rock-n-Roll");
+styles[Math.floor((styles.length - 1 ) / 2)] = "Classics";
+const shift = styles.shift();
+console.log(shift);
+
+
+styles.unshift("Rap", "Reggae");
+
+
+console.log(styles);
