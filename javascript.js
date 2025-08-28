@@ -3284,3 +3284,7 @@ fruit.push("Peach","Lemon");
 console.log(fruits);
 
 console.log(fruit === fruits)
+
+console.log(0 == []);
+
+console.log('0' == []);
