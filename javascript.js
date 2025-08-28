@@ -3334,70 +3334,124 @@ let myFavCats = "My cats are called ";
 
 // console.log(sumInput());
 
-let arr = ["I", "go", "home"];
-console.log(arr);
-// arrays are objects, so we can try to use delete:
+// let arr = ["I", "go", "home"];
+// console.log(arr);
+// // arrays are objects, so we can try to use delete:
 
-delete arr[1];
-console.log(arr);
-console.log(arr.length);
-console.log(arr[1]);
+// delete arr[1];
+// console.log(arr);
+// console.log(arr.length);
+// console.log(arr[1]);
 
-// so we have to use something else like arr.splice which is Swiss army knife for arrays
+// // so we have to use something else like arr.splice which is Swiss army knife for arrays
 
-arr = ["I", "Study", "JavaScript"];
+// arr = ["I", "Study", "JavaScript"];
 
-arr.splice(1,1);
-console.log(arr);
+// arr.splice(1,1);
+// console.log(arr);
 
-arr = ["I", "Study", "JavaScript", "right", "now"];
+// arr = ["I", "Study", "JavaScript", "right", "now"];
 
-let removed = arr.splice(0, 3, "Let\'s", "dance");
+// let removed = arr.splice(0, 3, "Let\'s", "dance");
 
-console.log(arr);
-console.log(removed);
+// console.log(arr);
+// console.log(removed);
 
-// splice method can also insert the element without any removals. For that we need to set deletcount to 0
+// // splice method can also insert the element without any removals. For that we need to set deletcount to 0
 
-arr = ["I", "Study", "JavaScript"];
+// arr = ["I", "Study", "JavaScript"];
 
-arr.splice(3,0, "Which", "Is", "Weird");
-console.log(arr);
+// arr.splice(3,0, "Which", "Is", "Weird");
+// console.log(arr);
 
-arr.splice(3,3);
+// arr.splice(3,3);
 
-console.log(arr);
+// console.log(arr);
 
-arr.splice(2,0,"Complex", "Language");
+// arr.splice(2,0,"Complex", "Language");
 
-console.log(arr);
+// console.log(arr);
 
-// Negative index are allowed:
+// // Negative index are allowed:
 
-arr = [1, 2, 5];
+// arr = [1, 2, 5];
 
-arr.splice(-1,0,3,4);
+// arr.splice(-1,0,3,4);
 
-console.log(arr);
+// console.log(arr);
 
-// SLICE slice():
+// // SLICE slice():
 
-// arr.slicr([start], [end])
+// // arr.slicr([start], [end])
 
-arr = ['t', "e", "s", "t"];
+// arr = ['t', "e", "s", "t"];
 
-console.log(arr.slice(1,3)); //e ,s
+// console.log(arr.slice(1,3)); //e ,s
 
-console.log(arr.slice(-2)); //["s", "t"];
+// console.log(arr.slice(-2)); //["s", "t"];
 
 
-// arr.slice can also be used to copy the arr.
+// // arr.slice can also be used to copy the arr.
 
-// CONCAT = > arr.concat
+// // CONCAT = > arr.concat
 
-arr = [1, 2];
-console.log(arr.concat([3,4]));
+// arr = [1, 2];
+// console.log(arr.concat([3,4]));
 
-console.log(arr.concat([3,4], [5,6]));
+// console.log(arr.concat([3,4], [5,6]));
 
-console.log(arr.concat([3,4],5,6));
+// console.log(arr.concat([3,4],5,6));
+
+
+// Iterate: forEach
+
+// Array.forEach(function(item, index, array){
+//     // do some
+// })
+
+
+// const arr = ["Bilbo", "Gandalf", "Nazgul"];
+
+// arr.forEach(alert);
+
+// arr.forEach(item);
+// arr.forEach((item, index, array) => {
+//     console.log(`${item} is at index ${index} in array ${array}`);
+// })
+
+
+// Searching in array
+
+// 1. indexOf/lastIndexOf and includes
+// indexOf --> return index or if not found returns -1
+//  && includes returns -- > true if found
+
+// let arr = [1, 0, false];
+
+// console.log(arr.indexOf(0));
+// console.log(arr.indexOf(false));
+// console.log(arr.indexOf(null));
+
+// console.log(arr.includes(1));
+// console.log(arr.includes(null));
+
+// find and findIndex/findLastIndexOf
+
+
+// filter
+
+let users = [
+    {id: 1, name: "John"},
+    {id: 2, name: "Pete"},
+    {id: 3, name: "Mary"},
+];
+
+let someUsers = users.filter(item => item.id < 3);
+
+console.log(users);
+console.log(someUsers);
+
+let user = users.find(item => item.id === 3);
+
+console.log(user);
+
