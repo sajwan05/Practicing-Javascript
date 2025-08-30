@@ -3610,41 +3610,71 @@ let myFavCats = "My cats are called ";
 
 // Array indices: 
 
-const arr = ["hey", "how", "are", "you"];
+// const arr = ["hey", "how", "are", "you"];
 
-console.log(arr[2]);
+// console.log(arr[2]);
 
-const years = [2025, 2026, 2027, 2028, 2029, 2030];
+// const years = [2025, 2026, 2027, 2028, 2029, 2030];
 
-console.log(years[2]);
-console.log(years[3]);
+// console.log(years[2]);
+// console.log(years[3]);
 
-console.log(years["2"]);
+// console.log(years["2"]);
 
-console.log(years["2"] !== years["02"]);
-
-
-// Relationship between length and numerical properties:
-
-const fruits = [];
-
-fruits.push("Banana", "Apple", "Peach");
-
-console.log(fruits.length);
-
-fruits[5] = "mango";
-
-console.log(fruits);
-console.log(fruits[2])
-console.log(fruits[4]);
-console.log(fruits[5]);
-console.log(fruits[6]);
-
-console.log(Object.keys(fruits));
+// console.log(years["2"] !== years["02"]);
 
 
+// // Relationship between length and numerical properties:
+
+// const fruits = [];
+
+// fruits.push("Banana", "Apple", "Peach");
+
+// console.log(fruits.length);
+
+// fruits[5] = "mango";
+
+// console.log(fruits);
+// console.log(fruits[2])
+// console.log(fruits[4]);
+// console.log(fruits[5]);
+// console.log(fruits[6]);
+
+// console.log(Object.keys(fruits));
+// console.log(fruits.length);
+
+// fruits.length = 2;
+
+// console.log(Object.keys(fruits));
+// console.log(fruits.length);
+
+// const colors = ["red", "yellow", "blue"];
+// colors[5] = "purple";
+
+// colors.forEach( (item, index) => {
+//     console.log(`${index} : ${item}`);
+// })
+
+// colors.reverse();
+
+// console.log(colors);
 
 
+const colors = ["red", "yellow", "blue"];
+colors[5] = "purple";
+
+const iterator = colors.keys();
+
+// console.log(Object.keys(colors));
+for (const key of iterator) {
+    console.log(`${key}: ${colors[key]}`);
+
+
+}
+
+
+const newColors = colors.toReversed();
+console.log(newColors);
 
 
 
