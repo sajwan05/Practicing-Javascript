@@ -3575,38 +3575,72 @@ let myFavCats = "My cats are called ";
 
 // Array.isArray: 
 
-console.log(typeof {});
-console.log(typeof []);
+// console.log(typeof {});
+// console.log(typeof []);
 
-console.log(Array.isArray({}));
-console.log(Array.isArray([]));
+// console.log(Array.isArray({}));
+// console.log(Array.isArray([]));
 
 
 
-// Most method support "thisArg":
+// // Most method support "thisArg":
 
-// Almost all array methods that call functions - like find, filter, map with notable exception of sort, accept an optional additional parameter thisArg.
+// // Almost all array methods that call functions - like find, filter, map with notable exception of sort, accept an optional additional parameter thisArg.
 
-let army = {
-    minAge: 18,
-    maxAge: 27,
-    canJoin(user) {
-        return user.age >= this.minAge && user.age < this.maxAge;
-    }
-}
+// let army = {
+//     minAge: 18,
+//     maxAge: 27,
+//     canJoin(user) {
+//         return user.age >= this.minAge && user.age < this.maxAge;
+//     }
+// }
 
-let users = [
-    {age: 16},
-    {age : 20},
-    {age: 23},
-    {age: 30},
-];
+// let users = [
+//     {age: 16},
+//     {age : 20},
+//     {age: 23},
+//     {age: 30},
+// ];
 
-let soldiers = users.filter(army.canJoin, army);
+// let soldiers = users.filter(army.canJoin, army);
 
-console.log(soldiers.length);
-console.log(soldiers[0].age);
-console.log(soldiers[1].age);
+// console.log(soldiers.length);
+// console.log(soldiers[0].age);
+// console.log(soldiers[1].age);
+
+// Array indices: 
+
+const arr = ["hey", "how", "are", "you"];
+
+console.log(arr[2]);
+
+const years = [2025, 2026, 2027, 2028, 2029, 2030];
+
+console.log(years[2]);
+console.log(years[3]);
+
+console.log(years["2"]);
+
+console.log(years["2"] !== years["02"]);
+
+
+// Relationship between length and numerical properties:
+
+const fruits = [];
+
+fruits.push("Banana", "Apple", "Peach");
+
+console.log(fruits.length);
+
+fruits[5] = "mango";
+
+console.log(fruits);
+console.log(fruits[2])
+console.log(fruits[4]);
+console.log(fruits[5]);
+console.log(fruits[6]);
+
+console.log(Object.keys(fruits));
 
 
 
