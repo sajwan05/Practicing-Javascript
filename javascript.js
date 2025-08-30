@@ -3779,43 +3779,99 @@ let myFavCats = "My cats are called ";
 
 // Access an array item by its index:
 
-const fruits = ["Apple", "Banana"];
+// const fruits = ["Apple", "Banana"];
 
-console.log(fruits[0]);
-console.log(fruits[1]);
-console.log(fruits[fruits.length - 1]);
+// console.log(fruits[0]);
+// console.log(fruits[1]);
+// console.log(fruits[fruits.length - 1]);
 
-console.log(fruits[99]);
-
-
-// Find the index of an item in an array:
-
-console.log(fruits.indexOf("Banana"));
+// console.log(fruits[99]);
 
 
-// Check if an array contains a ceratain item:
+// // Find the index of an item in an array:
 
-console.log(fruits.includes("Banana"));
-console.log(fruits.includes("Cherry"));
+// console.log(fruits.indexOf("Banana"));
 
 
-console.log(fruits.indexOf("Banana") !== -1)  ;
-console.log(fruits.indexOf("Cherry") !== -1);
+// // Check if an array contains a ceratain item:
 
-// Append an item to an array
+// console.log(fruits.includes("Banana"));
+// console.log(fruits.includes("Cherry"));
 
-const newLength = fruits.push("Orange");
+
+// console.log(fruits.indexOf("Banana") !== -1)  ;
+// console.log(fruits.indexOf("Cherry") !== -1);
+
+// // Append an item to an array
+
+// const newLength = fruits.push("Orange");
+
+// console.log(fruits);
+
+// console.log(newLength);
+
+// const removedItem = fruits.pop();
+
+// console.log(removedItem);
+
+// console.log(fruits);
+// console.log(fruits.length);
+
+// Remove the last item from an array:
+
+// This example uses pop() method to remove the last item from the fruits array.
+
+// Remove multiple items from the end of an array:
+
+// const fruits = ["Apple", "Banana", "Strawberry", "Mango", "Cherry"];
+
+// const start = -2;
+
+// const removedItems = fruits.splice(start, 2, "Index", "Hey");
+
+// console.log(fruits);
+
+// console.log(removedItems);
+
+
+// Remove the first item from an array:
+
+// This example uses the shift method to remove the first item from the fruits array:
+
+// const fruits = ["Apple", "Banana"];
+
+// const removedItem = fruits.shift();
+// console.log(fruits);
+
+// console.log(removedItem);
+
+
+// To remove multiple items from starting of an array 
+
+const fruits = ["Apple", "Strawberry", "Cherry", "Banana", "Mango"];
+
+const start = 0;
+const deleteCount = 4;
+const removedItems = fruits.splice(start, deleteCount);
+
+console.log(fruits);
+
+console.log(removedItems);
+
+
+const newLength = fruits.unshift("Strawberry");
 
 console.log(fruits);
 
 console.log(newLength);
 
-const removedItem = fruits.pop();
 
-console.log(removedItem);
 
-console.log(fruits);
-console.log(fruits.length);
+
+
+
+
+
 
 
 
