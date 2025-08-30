@@ -3660,21 +3660,170 @@ let myFavCats = "My cats are called ";
 // console.log(colors);
 
 
-const colors = ["red", "yellow", "blue"];
-colors[5] = "purple";
+// const colors = ["red", "yellow", "blue"];
+// colors[5] = "purple";
 
-const iterator = colors.keys();
+// const iterator = colors.keys();
 
-// console.log(Object.keys(colors));
-for (const key of iterator) {
-    console.log(`${key}: ${colors[key]}`);
-
-
-}
+// // console.log(Object.keys(colors));
+// for (const key of iterator) {
+//     console.log(`${key}: ${colors[key]}`);
 
 
-const newColors = colors.toReversed();
-console.log(newColors);
+// }
+
+
+// const newColors = colors.toReversed();
+// console.log(newColors);
+
+// const arr = [0, 1, 2];
+// console.log(arr);
+// arr.length = 3;
+// arr.copyWithin(0, 1, 2);//muted array
+
+// console.log(arr);
+
+// const arr2 = arr.slice().copyWithin(0,1,2);
+
+// console.log(arr2);
+
+// const arr3 = [...arr].copyWithin(0,1,2);//Does not mutate array
+
+// console.log(arr3);
+
+
+// Iterative methods in array
+
+// method(callbackFn, thisArg)
+
+// where callbackFn takes three arguments:
+
+// #element
+
+// #index
+
+// #array
+
+// arrow function don't have their own this binding
+
+
+
+// function method(callbackFn, thisArg) {
+//     const length = this.length;
+
+//     for(let i = 0; i < length; i++) {
+//         if (i in this) {
+//             const result = callbackFn.call(thisArg, this[i], i, this);
+//             // Do something with result
+//         }
+//     }
+// }
+
+
+// Generic array methods 
+
+// const arrayLike = {
+//     0: "a",
+//     1: "b",
+//     length: 2,
+
+// };
+// console.log(Array.prototype.join.call(arrayLike, " + ")); // a + b
+
+// NORMALIZATION OF LENGTH PROPERTY
+
+// const arr = [];
+// console.log(arr.length)
+
+// console.log(Array.prototype.flat.call({}));
+
+// const a = {length : 0.7 };
+
+// Array.prototype.push.call(a);
+
+// console.log(a);
+// console.log(a.length);
+
+
+// Array like objects:
+
+// Create an array 
+// -using array literal notation
+
+// const fruits = ["Apple", "Banana"];
+// console.log(fruits.length);
+// // -using Array() constructor
+
+// const fruits2 = ["Apple", "Banana", "Mango"];
+// console.log(fruits2.length);
+// // -finally using String.prototype.split() -- to build the array from string.
+
+// const fruits3 = fruits2.join(", ");
+
+// console.log(fruits3);
+
+// const fruits4 = fruits3.split(",");
+
+// console.log(fruits4);
+
+// console.log(fruits4.length);
+
+
+// Create a string from an array:
+
+// const fruits = ["Apple", "Banana"];
+
+// const fruitString = fruits.join(", ");
+
+// console.log(fruitString);
+
+// Access an array item by its index:
+
+const fruits = ["Apple", "Banana"];
+
+console.log(fruits[0]);
+console.log(fruits[1]);
+console.log(fruits[fruits.length - 1]);
+
+console.log(fruits[99]);
+
+
+// Find the index of an item in an array:
+
+console.log(fruits.indexOf("Banana"));
+
+
+// Check if an array contains a ceratain item:
+
+console.log(fruits.includes("Banana"));
+console.log(fruits.includes("Cherry"));
+
+
+console.log(fruits.indexOf("Banana") !== -1)  ;
+console.log(fruits.indexOf("Cherry") !== -1);
+
+// Append an item to an array
+
+const newLength = fruits.push("Orange");
+
+console.log(fruits);
+
+console.log(newLength);
+
+const removedItem = fruits.pop();
+
+console.log(removedItem);
+
+console.log(fruits);
+console.log(fruits.length);
+
+
+
+
+
+
+
+
 
 
 
