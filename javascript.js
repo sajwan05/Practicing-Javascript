@@ -3561,16 +3561,54 @@ let myFavCats = "My cats are called ";
 
 // reduce/ reduce right
 
-let arr = [1, 2, 3, 4, 5];
-let result = arr.reduce((sum, current) => sum + current, 0);
+// let arr = [1, 2, 3, 4, 5];
+// let result = arr.reduce((sum, current) => sum + current, 0);
 
-console.log(result);
+// console.log(result);
 
-const array = [];
+// const array = [];
 
-let results = array.reduce((sum, current ) => sum + current, 0);
+// let results = array.reduce((sum, current ) => sum + current, 0);
 
-console.log(results);
+// console.log(results);
+
+
+// Array.isArray: 
+
+console.log(typeof {});
+console.log(typeof []);
+
+console.log(Array.isArray({}));
+console.log(Array.isArray([]));
+
+
+
+// Most method support "thisArg":
+
+// Almost all array methods that call functions - like find, filter, map with notable exception of sort, accept an optional additional parameter thisArg.
+
+let army = {
+    minAge: 18,
+    maxAge: 27,
+    canJoin(user) {
+        return user.age >= this.minAge && user.age < this.maxAge;
+    }
+}
+
+let users = [
+    {age: 16},
+    {age : 20},
+    {age: 23},
+    {age: 30},
+];
+
+let soldiers = users.filter(army.canJoin, army);
+
+console.log(soldiers.length);
+console.log(soldiers[0].age);
+console.log(soldiers[1].age);
+
+
 
 
 
