@@ -4058,32 +4058,62 @@ console.log(fruits)
 
 // Creating a two dimensional array:
 
+// const board = [
+//     ["R", "N", "B", "Q", "K", "B", "N", "R"],
+//     ["P", "P", "P", "P", "P", "P", "P", "P"],
+//     [" ", " ", " ", " ", " ", "  "," ", " "],
+//     [" ", " ", " ", " ", " ", "  "," ", " "],
+//     [" ", " ", " ", " ", " ", "  "," ", " "],
+//     [" ", " ", " ", " ", " ", "  "," ", " "],
+//     ["p", "p", "p", "p", "p", "p", "p", "p"],
+//     ["r", "n", "b", "q", "k", "b", "n", "r"],
+// ];
+
+// console.log(`${board.join("\n")}\n\n`);
+
+// board[4][4] = board[6][4];
+// board[6][4] = " ";
+// console.log(board.join("\n"));
+
+// // Using an array to tabulate a set of values: 
+// const values = [];
+
+// for (let x = 0; x < 10; x++) {
+//     values.push([2 ** x, 2 ** x ** 2]);
+// }
+
+// console.table(values);
+
+// Creating a two-dimensional array:
+
 const board = [
     ["R", "N", "B", "Q", "K", "B", "N", "R"],
     ["P", "P", "P", "P", "P", "P", "P", "P"],
-    [" ", " ", " ", " ", " ", "  "," ", " "],
-    [" ", " ", " ", " ", " ", "  "," ", " "],
-    [" ", " ", " ", " ", " ", "  "," ", " "],
-    [" ", " ", " ", " ", " ", "  "," ", " "],
+    [" ", " ", " ", " ", " ", " ", " ", " "],
+    [" ", " ", " ", " ", " ", " ", " ", " "],
+    [" ", " ", " ", " ", " ", " ", " ", " "],
+    [" ", " ", " ", " ", " ", " ", " ", " "],
     ["p", "p", "p", "p", "p", "p", "p", "p"],
     ["r", "n", "b", "q", "k", "b", "n", "r"],
 ];
 
 console.log(`${board.join("\n")}\n\n`);
 
+// Move King's Pawn forward 2
+
 board[4][4] = board[6][4];
 board[6][4] = " ";
+
 console.log(board.join("\n"));
 
-// Using an array to tabulate a set of values: 
-const values = [];
+// using an array to tabulate set of values:
 
+const values = [];
 for (let x = 0; x < 10; x++) {
-    values.push([2 ** x, 2 ** x ** 2]);
+    values.push([2 ** x, 2 * x ** 2]);
 }
 
-console.table(values);
-
+console.log(values);
 
 
 
