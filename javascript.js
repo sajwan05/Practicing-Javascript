@@ -3846,24 +3846,244 @@ let myFavCats = "My cats are called ";
 // console.log(removedItem);
 
 
-// To remove multiple items from starting of an array 
+// // To remove multiple items from starting of an array 
 
-const fruits = ["Apple", "Strawberry", "Cherry", "Banana", "Mango"];
+// const fruits = ["Apple", "Strawberry", "Cherry", "Banana", "Mango"];
 
-const start = 0;
-const deleteCount = 4;
-const removedItems = fruits.splice(start, deleteCount);
+// const start = 0;
+// const deleteCount = 4;
+// const removedItems = fruits.splice(start, deleteCount);
 
-console.log(fruits);
+// console.log(fruits);
+
+// console.log(removedItems);
+
+
+// const newLength = fruits.unshift("Strawberry");
+
+// console.log(fruits);
+
+// console.log(newLength);
+
+// Create an arry
+// - using array literals notation
+
+// const fruits = ["Apple", "Banana"];
+// console.log(fruits.lenght);
+
+// // using Array() constructor
+// const fruits2 = new Array("Apple", "Banana");
+
+// // using string.prototype.split().
+
+
+// const fruits3 = "Banana, Apple".split(", ");
+
+// console.log(fruits3);
+
+// // Create a string from an array:
+// console.log(fruits);
+// const fruitsString = fruits.join(", ");
+// console.log(fruitsString);
+
+// // Access an array item by index
+
+// console.log(fruits[0]);
+// console.log(fruits[1]);
+// console.log(fruits[fruits.length -1 ]);
+// console.log(fruits[99]);
+
+
+// // Find the index of an item in an array:
+
+// console.log(fruits.indexOf("Banana"));
+
+// // Check if an array contain a ceratain item :
+
+// console.log(fruits.includes("Apple"));
+// console.log(fruits.includes("Strawberry"));
+
+// console.log(fruits.indexOf("Apple") !== -1);
+// console.log(fruits.indexOf("Strawberry") !== -1);
+
+// // Append an item to an array:
+
+// const newLength = fruits.push("Orange");
+// console.log(newLength);
+// console.log(fruits);
+
+// // remove the last item from an array:
+
+// const itemRemoved = fruits.pop();
+
+// console.log(fruits.length);
+// console.log(fruits);
+// console.log(itemRemoved);
+
+// // Remove multiple items from the end of an array:
+
+// // const fal = ["Apple", "Banana", "Strawberry", "Mango", "Cherry"];
+
+// // const start = -3;
+
+// // const spliced = fal.splice(start);
+
+// // console.log(spliced);
+// // console.log(fal);
+
+// // Truncate an array down to just its first N items:
+// const fal = ["Apple", "Banana", "Strawberry", "Mango", "Cherry"];
+
+// const starts = 2;
+
+// const removeItems = fal.splice(starts);
+
+// console.log(fal);
+// console.log(removeItems);
+
+// Remove the first item from an array:
+
+// const fruits = ["Apple", "Banana"];
+
+// const removeItems = fruits.shift();
+// console.log(fruits);
+
+// console.log(removeItems);
+
+
+// Remove multiple items from the beginning of an array:
+
+// const fruits = ["Apple", "Strawberry", "Cherry", "Banana", "Mango"];
+
+// const start = 0;
+// const deleteCount = 3;
+// const removeItem = fruits.splice(start,deleteCount);
+
+// console.log(removeItem);
+// console.log(fruits);
+
+// // add a new first Item to an array:
+
+// const fruits2 = ["Banana", "Mango"];
+
+// const newLength = fruits.unshift("Strawberry");
+
+// console.log(fruits);
+// console.log(newLength);
+
+// // Remove a single item by index:
+
+// const fruits3 = ["Apple", "Mango", "Cherry", "Banana", "Strawberry"];
+// console.log(fruits3);
+// // Let's suppose I want to remove cherry
+// const starts = fruits3.indexOf("Cherry");
+
+// // const starts = index;
+// const deleteCounts = 1;
+// const removeItems = fruits3.splice(starts, deleteCounts);
+
+// console.log(fruits3);
+// console.log(removeItems);
+
+// console.log(fruits3.length);
+
+// Replace multiple items in an array:
+
+const fruits5 = ["Apple", "Banana", "Strawberry"];
+
+const start = -2;
+const deleteCount = 2;
+
+const removedItems = fruits5.splice(start, deleteCount, "Mango", "Cherry");
 
 console.log(removedItems);
+console.log(fruits5);
 
 
-const newLength = fruits.unshift("Strawberry");
+// Iterate over an array
 
+const fruits = ["Apple", "Mango", "Cherry"];
+
+for (const fruit of fruits) {
+    console.log(fruit);
+}
+
+// Call a function on each element in an array:
+
+fruits.forEach( (item, index, arr) => {
+    console.log(item, index);
+});
+
+// Merge multiple arrays together :
+
+const moreFruits = ["Strawberry", "Cheeku"];
+
+const combinedFruits = fruits.concat(moreFruits);
+
+console.log(combinedFruits);
+
+// copy an array:
+
+
+fruits.splice(0, 1, "Strawberry");
+fruits.pop();
 console.log(fruits);
 
-console.log(newLength);
+//there are three ways to copy an array:
+
+// create a copy using spread syntax:
+
+const fruitsCopy = [...fruits];
+
+console.log(fruitsCopy);
+
+// create a copy using form method
+
+const fruitsCopy2 = Array.from(fruits);
+
+console.log(fruitsCopy);
+
+// Create a copy using slice() method
+
+const fruitsCopy3 = fruits.slice();
+
+console.log(fruitsCopy3);
+
+const fruitsDeepCopy = JSON.parse(JSON.stringify(fruits));
+
+fruitsCopy2.pop();
+console.log(fruits);
+console.log(fruits)
+
+
+// Creating a two dimensional array:
+
+const board = [
+    ["R", "N", "B", "Q", "K", "B", "N", "R"],
+    ["P", "P", "P", "P", "P", "P", "P", "P"],
+    [" ", " ", " ", " ", " ", "  "," ", " "],
+    [" ", " ", " ", " ", " ", "  "," ", " "],
+    [" ", " ", " ", " ", " ", "  "," ", " "],
+    [" ", " ", " ", " ", " ", "  "," ", " "],
+    ["p", "p", "p", "p", "p", "p", "p", "p"],
+    ["r", "n", "b", "q", "k", "b", "n", "r"],
+];
+
+console.log(`${board.join("\n")}\n\n`);
+
+board[4][4] = board[6][4];
+board[6][4] = " ";
+console.log(board.join("\n"));
+
+// Using an array to tabulate a set of values: 
+const values = [];
+
+for (let x = 0; x < 10; x++) {
+    values.push([2 ** x, 2 ** x ** 2]);
+}
+
+console.table(values);
+
 
 
 
