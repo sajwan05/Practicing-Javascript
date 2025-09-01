@@ -4292,14 +4292,24 @@ Or just use map
 
 // console.log(camelize("-webkit-transition"));
 
-function camelize(str) {
-    return str =
-    str.split("-").map 
-    ((item, index) => index === 0 ? item : item[0].toUpperCase() + item.slice(1)).join("");
+// function camelize(str) {
+//     return str =
+//     str.split("-").map 
+//     ((item, index) => index === 0 ? item : item[0].toUpperCase() + item.slice(1)).join("");
+// }
+// console.log(camelize("-webkit-transition"));
+
+// Filter range excercise
+// we have an array 
+// we'll filter array in such a way that it gives us >= a and <= b
+
+function filterRange(arr, a, b) {
+    const filteredArr = arr.filter((item) => item >= a && item <= b )
+
+    return filteredArr;
 }
-console.log(camelize("-webkit-transition"));
 
-
+console.log(filterRange([5,3,8,1],1,4));
 
 
 
