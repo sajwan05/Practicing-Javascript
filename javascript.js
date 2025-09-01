@@ -4152,21 +4152,21 @@ Or just use map
 
 // console.log(sumOfTripledEvens([1, 2, 3, 4, 5, 6]));
 
-const sumOfTripledEvens = ( (array) => {
-    let sum = 0;
+// const sumOfTripledEvens = ( (array) => {
+//     let sum = 0;
 
-    for (let i = 0; i < array.length; i++){
-        if (array[i] % 2 === 0) {
-            const tripledEvenNumber = array[i] * 3;
+//     for (let i = 0; i < array.length; i++){
+//         if (array[i] % 2 === 0) {
+//             const tripledEvenNumber = array[i] * 3;
 
-            sum += tripledEvenNumber;
-        }
-    }
+//             sum += tripledEvenNumber;
+//         }
+//     }
 
-    return sum;
-});
+//     return sum;
+// });
 
-console.log(sumOfTripledEvens([2, 3, 4,5,6,7,8]));
+// console.log(sumOfTripledEvens([2, 3, 4,5,6,7,8]));
 
 
 // The map method
@@ -4185,13 +4185,13 @@ console.log(sumOfTripledEvens([2, 3, 4,5,6,7,8]));
 
 // console.log(arr);
 
-const arr = [1, 2, 3, 4, 5];
+// const arr = [1, 2, 3, 4, 5];
 
-const mappedArr = arr.map( (num) => {
-    return num + 1;
-} );
+// const mappedArr = arr.map( (num) => {
+//     return num + 1;
+// } );
 
-console.log(mappedArr);
+// console.log(mappedArr);
 
 // The filter method:
 
@@ -4206,21 +4206,68 @@ console.log(mappedArr);
 // const oddNumberArr = arr.filter(oddNum);
 // console.log(oddNumberArr);
 
-const oddNumberArr = arr.filter( (num) => num % 2);
+// const oddNumberArr = arr.filter( (num) => num % 2);
 
-console.log(oddNumberArr);
+// console.log(oddNumberArr);
 
 
-// The reduce method :
+// // The reduce method :
 
-const array = [1, 2, 3, 4, 5];
-const initialValue = 1;
-const productOfAllNums = array.reduce((total, currentItem) => {
-    return total * currentItem;
-}, initialValue);
+// const array = [1, 2, 3, 4, 5];
+// const initialValue = 1;
+// const productOfAllNums = array.reduce((total, currentItem) => {
+//     return total * currentItem;
+// }, initialValue);
 
-console.log(productOfAllNums);
-console.log(arr);
+// console.log(productOfAllNums);
+// console.log(arr);
+
+// const sumOfTripledEvens = ( (arr) => {
+//     let sum = 0;
+
+//     for(let i = 0; i < arr.length; i++) {
+//         if (arr[i] % 2 === 0) {
+//             const tripledEven = arr[i] * 3;
+
+//             sum += tripledEven;
+//         }
+//     }
+
+//     return sum;
+// })
+
+// console.log(sumOfTripledEvens([1, 2, 3, 4, 5, 0]));
+
+// map
+// const array = [1,2,3,4,5];
+
+// const evenArray = array.filter((num) => {
+//     if (num % 2 === 0){
+//         return true;
+//     }
+// })
+
+// console.log(evenArray);
+
+// const tripledEven = evenArray.map((num) => num * 3);
+
+// console.log(tripledEven);
+
+// const sumOfTripledArr = tripledEven.reduce((total, current) => {
+//     return total + current;
+// }, 0);
+
+// console.log(sumOfTripledArr);
+
+// const sumOfTripledEvens = ((array) => {
+//     return array.
+//     filter((num) => num % 2 === 0).
+//     map((num) => num * 3).
+//     reduce((total, current) => total + current);
+// });
+
+// console.log(sumOfTripledEvens([1,2,3,4,5,6]));
+
 
 
 
