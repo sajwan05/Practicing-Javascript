@@ -4115,6 +4115,118 @@ for (let x = 0; x < 10; x++) {
 
 console.log(values);
 
+// Creating an array using the result of a match:
+
+
+// As an example of what we mean, let’s consider a sumOfTripledEvens function. It will:
+
+/* 
+    Take in an array.
+    For every even number, it will triple it.
+    Then it will sum all those even numbers.
+*/ 
+
+/* Pseudocode
+
+we will first have to have a variable for sum
+Then we'll iterate through an array
+If the item will be even so we'll triple it
+and will store tripled elememnt in a variable and if even sum them and store them in sum
+
+Or just use map
+*/ 
+
+// const sumOfTripledEvens = ( (array) => {
+//     let sum = 0;
+
+//     for (const item of array) {
+//         if (item % 2 === 0) {
+//             const tripledItems = item * 3;
+
+//             sum += tripledItems;
+//         }
+//     }
+
+//     return sum;
+// })
+
+// console.log(sumOfTripledEvens([1, 2, 3, 4, 5, 6]));
+
+const sumOfTripledEvens = ( (array) => {
+    let sum = 0;
+
+    for (let i = 0; i < array.length; i++){
+        if (array[i] % 2 === 0) {
+            const tripledEvenNumber = array[i] * 3;
+
+            sum += tripledEvenNumber;
+        }
+    }
+
+    return sum;
+});
+
+console.log(sumOfTripledEvens([2, 3, 4,5,6,7,8]));
+
+
+// The map method
+
+// function addOne(num) {
+//     return num + 1;
+// }
+
+// const arr = [1, 2, 3, 4, 5];
+
+// const mappedArr = arr.map(addOne);
+
+// console.log(mappedArr);
+
+// // map returns the new array and does not change the original array.
+
+// console.log(arr);
+
+const arr = [1, 2, 3, 4, 5];
+
+const mappedArr = arr.map( (num) => {
+    return num + 1;
+} );
+
+console.log(mappedArr);
+
+// The filter method:
+
+// get all the odd numbers 
+
+// function oddNum(num) {
+//     if (num % 2){
+//         return num;
+//     }
+// }
+
+// const oddNumberArr = arr.filter(oddNum);
+// console.log(oddNumberArr);
+
+const oddNumberArr = arr.filter( (num) => num % 2);
+
+console.log(oddNumberArr);
+
+
+// The reduce method :
+
+const array = [1, 2, 3, 4, 5];
+const initialValue = 1;
+const productOfAllNums = array.reduce((total, currentItem) => {
+    return total * currentItem;
+}, initialValue);
+
+console.log(productOfAllNums);
+console.log(arr);
+
+
+
+
+
+
 
 
 
