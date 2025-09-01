@@ -4268,6 +4268,36 @@ Or just use map
 
 // console.log(sumOfTripledEvens([1,2,3,4,5,6]));
 
+// Excercise:
+
+// border-left-width ---> borderLeftWidth
+
+// find the index of -
+// then using index+1 item we will capitalize that
+// splice dash splice(index,1)
+// return string
+
+// function camelize(str) {
+//     const arr = str.split("");
+
+//    for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] == "-") {
+//         arr[i+1] = arr[i+1].toUpperCase();
+//         arr[i] = "";
+//     }
+//    }
+
+//    return arr.join("");
+// }
+
+// console.log(camelize("-webkit-transition"));
+
+function camelize(str) {
+    return str =
+    str.split("-").map 
+    ((item, index) => index === 0 ? item : item[0].toUpperCase() + item.slice(1)).join("");
+}
+console.log(camelize("-webkit-transition"));
 
 
 
