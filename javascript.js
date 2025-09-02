@@ -4485,6 +4485,26 @@ function sortedArr (arr) {
 }
 const arr = ["HTML", "JavaScript", "CSS"];
 console.log(sortedArr(arr))
+
+
+
+// These are ways to copy array but other 8th method all others create shallow copy one level deep: 8th method create deep copies so original array and copied array is completely independent.
+let myFavoriteFood = [["bacon", "raspberries"], "cheese"]
+
+//1. Spread Operator
+//2. For Loop
+//3. While loop
+//4. Array.map
+//5. Array.filter
+//6. Array.reduce
+//7. Array.slice
+//8. JSON.parse and JSON.stringify ---deep copy
+//9. Array.concat
+//10. Array.from
+
+
+console.log(`My favorite foods are: ${myFavoriteFood.flat().join(", ")}`)
+console.log(`Your favorite foods are: ${yourFavoriteFood.flat().join(", ")}`)
  
 
 
