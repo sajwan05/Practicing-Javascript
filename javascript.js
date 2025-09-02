@@ -4373,6 +4373,34 @@ console.log(camelize("list-style-image"));
 console.log(camelize("background-color"));
 
 
+// Filter range:
+
+/*
+    
+Write a function filterRange(arr, a, b) that gets an array arr, looks for elements with values higher or equal to a and lower or equal to b and return a result as an array.
+
+The function should not modify the array. It should return the new array.
+*/ 
+
+/*
+Pseudocode:
+//we can not mutate the array:
+// arr: const array = arr
+// filter : 
+// if item inside array is in the range of a and b so we'll just filter it to new array:
+
+
+
+*/
+
+function filterRange(arr, a, b) {
+    const array = arr.filter((item) => item >= a && item <= b);
+
+    return array;
+}
+
+console.log(filterRange([5, 3, 8, 1], 1, 4));
+console.log(filterRange([1, 2, 4, 8, 47, 0], 1, 5));
 
 
 
