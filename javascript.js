@@ -4340,22 +4340,38 @@ Or just use map
 
 // without map filter and reduce
 
-function sumOfTripledEven (arr) {
-    let sum = 0;
+// function sumOfTripledEven (arr) {
+//     let sum = 0;
 
-    for (let i = 0; i < arr.length; i++) {
-        if (arr[i] % 2 === 0) {
-            const tripledEven = arr[i] * 3;
+//     for (let i = 0; i < arr.length; i++) {
+//         if (arr[i] % 2 === 0) {
+//             const tripledEven = arr[i] * 3;
 
-            sum += tripledEven;
+//             sum += tripledEven;
 
-        } 
-    }
+//         } 
+//     }
 
-    return sum;
+//     return sum;
+// }
+
+// console.log(sumOfTripledEven([1, 2, 3, 4, 5, 6]));
+
+// border-left-width ---> borderLeftWidth
+
+function camelize(str) {
+    const arr = str.split("-");
+    const mappedArr = arr.map((item, index) => index === 0 ? item : item[0].toUpperCase() + item.slice(1));
+
+    str = mappedArr.join("");
+
+    return str;
 }
 
-console.log(sumOfTripledEven([1, 2, 3, 4, 5, 6]));
+console.log(camelize("-webkit-transition") );
+console.log(camelize("list-style-image"));
+console.log(camelize("background-color"));
+
 
 
 
