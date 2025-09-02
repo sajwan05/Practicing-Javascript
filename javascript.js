@@ -4459,6 +4459,23 @@ console.log(arrReverseInD([1, 4, 2, 6, 3, 34, 23, 18]));
 console.log(arrReverseInD([1, 4, 2, 6, 3, -3, 34, -10, 23, 18]));
 
 
+// Copy and sort array:
+/*
+    We have an array of strings arr. We’d like to have a sorted copy of it, but keep arr unmodified.
+
+Create a function copySorted(arr) that returns such a copy.
+
+Pseudocode :
+// we don't have to mutate the array:
+// sort it 
+*/ 
+
+function sortedArr(arr) {
+    return arr.toSorted();
+}
+
+console.log(sortedArr(["HTML", "JavaScript", "CSS"]));
+
 
 
 
