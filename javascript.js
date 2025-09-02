@@ -4421,7 +4421,7 @@ The function should only modify the array. It should not return anything.
 */ 
 
 function filterRangeInPlace (arr, a, b) {
-    
+
    const deleteCount = 1;
     for (let i = 0; i < arr.length; i++) {
         if (arr[i] < a || arr[i] > b) {
@@ -4435,6 +4435,28 @@ function filterRangeInPlace (arr, a, b) {
 
 console.log(filterRangeInPlace([1, 2, 3, 56, 0, 4], 1, 4));
 
+/*
+Sort in decreasing order
+
+Pseudocode:
+
+// we have an array we'll sort it in ascending order 
+// and just reverse it.
+
+// [1, 4, 2, 6, -10] ----> [-10, 1, 2, 4, 6] ----reverse --[6, 4, 2, 1, -10]
+*/ 
+
+function arrReverseInD(arr) {
+    const array = arr.sort((a, b) => a - b);
+
+    const arrInReverseOrder = array.toReversed();
+
+    return arrInReverseOrder;
+}
+
+console.log(arrReverseInD([1, 4, 2, 6, 3, 34, 23, 18]));
+
+console.log(arrReverseInD([1, 4, 2, 6, 3, -3, 34, -10, 23, 18]));
 
 
 
