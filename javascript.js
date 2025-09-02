@@ -4402,6 +4402,38 @@ function filterRange(arr, a, b) {
 console.log(filterRange([5, 3, 8, 1], 1, 4));
 console.log(filterRange([1, 2, 4, 8, 47, 0], 1, 5));
 
+/*
+Filter range "in place"
+importance: 4
+Write a function filterRangeInPlace(arr, a, b) that gets an array arr and removes from it all values except those that are between a and b. The test is: a ≤ arr[i] ≤ b.
+
+The function should only modify the array. It should not return anything.
+*/ 
+
+/*
+    Pseudocode:
+    //so we have to mutate the array:
+    // we'll iterate through array and it will not be in range of a and b it will be removed
+    // to remove we will just use splice right. so we will be able to mutate the array itself
+
+
+
+*/ 
+
+function filterRangeInPlace (arr, a, b) {
+    
+   const deleteCount = 1;
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] < a || arr[i] > b) {
+           arr.splice(i, deleteCount);
+            i--;
+        }
+    }
+
+    return arr;
+}
+
+console.log(filterRangeInPlace([1, 2, 3, 56, 0, 4], 1, 4));
 
 
 
