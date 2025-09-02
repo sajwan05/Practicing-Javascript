@@ -4303,13 +4303,59 @@ Or just use map
 // we have an array 
 // we'll filter array in such a way that it gives us >= a and <= b
 
-function filterRange(arr, a, b) {
-    const filteredArr = arr.filter((item) => item >= a && item <= b )
+// function filterRange(arr, a, b) {
+//     const filteredArr = arr.filter((item) => item >= a && item <= b )
 
-    return filteredArr;
+//     return filteredArr;
+// }
+
+// console.log(filterRange([5,3,8,1],1,4));
+
+// // Filter range "in place"
+
+// function filterRangeInPlace (arr, a, b) {
+    
+
+//     for (let i = 0; i < arr.length; i++) {
+//         if (a <= arr[i] && b >= arr[i]){
+//             arr[i] = arr[i];
+//         }else {
+//             arr.splice(i,1);
+//             i--;
+//         }
+//     }
+
+//     return arr;
+// }
+
+// console.log(filterRangeInPlace([5,3,8,1,5,6,7,4,3,8,9,78],1,4));
+
+// function sumOfTripledEvens (arr) {
+//     return arr.
+//     filter((item) => item % 2 === 0).map
+//     ((item) => item * 3).reduce((acc, current) => acc + current,0);
+// }
+
+// console.log(sumOfTripledEvens([1, 2, 3, 4, 5, 6]));
+
+// without map filter and reduce
+
+function sumOfTripledEven (arr) {
+    let sum = 0;
+
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] % 2 === 0) {
+            const tripledEven = arr[i] * 3;
+
+            sum += tripledEven;
+
+        } 
+    }
+
+    return sum;
 }
 
-console.log(filterRange([5,3,8,1],1,4));
+console.log(sumOfTripledEven([1, 2, 3, 4, 5, 6]));
 
 
 
