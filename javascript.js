@@ -4470,11 +4470,22 @@ Pseudocode :
 // sort it 
 */ 
 
-function sortedArr(arr) {
-    return arr.toSorted();
-}
+// function sortedArr(arr) {
+//     return arr.toSorted();
+// }
 
-console.log(sortedArr(["HTML", "JavaScript", "CSS"]));
+// console.log(sortedArr(["HTML", "JavaScript", "CSS"]));
+// const arr = ["HTML", "JavaScript", "CSS"];
+// console.log(sortedArr(arr));
+
+function sortedArr (arr) {
+    const mappedArr = arr.map((item) => item).toSorted();
+
+    return `sorted array: ${mappedArr} ,\noriginal array: ${arr}`;
+}
+const arr = ["HTML", "JavaScript", "CSS"];
+console.log(sortedArr(arr))
+ 
 
 
 
