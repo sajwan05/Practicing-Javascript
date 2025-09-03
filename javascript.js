@@ -4532,12 +4532,68 @@ shuffle(arr);
 All element orders should have an equal probability. For instance, [1,2,3] can be reordered as [1,2,3] or [1,3,2] or [3,1,2] etc, with equal probability of each case.
 */ 
 
-function shuffle(array) {
+// function shuffle(arr) {
+//  return   arr.sort(() => Math.random() - 0.5);
+// }
 
+// let count = {
+//     '123': 0,
+//     '132': 0,
+//     '213': 0,
+//     '231': 0,
+//     '321': 0,
+//     '312': 0,
+// };
+
+// for (let i = 0; i <= 100; i++) {
+//     let arr = [1, 2, 3];
+//     shuffle(arr);
+//     count[arr.join('')]++;
+// }
+
+// for(let key in count) {
+//     console.log(`${key}: ${count[key]}`);
+// }
+
+// console.log(shuffle([1, 2, 3]));
+// Fischer Yats algo
+
+function shuffle(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    let j = Math.floor(Math.random() * (i + 1)); // random index from 0 to i
+
+    // swap elements array[i] and array[j]
+    // we use "destructuring assignment" syntax to achieve that
+    // you'll find more details about that syntax in later chapters
+    // same can be written as:
+    let t = array[i]; array[i] = array[j]; array[j] = t
+    
+  }
+  return array;
 }
 
+console.log(shuffle([1, 2, 3]));
 
 
+let count = {
+  '123': 0,
+  '132': 0,
+  '213': 0,
+  '231': 0,
+  '321': 0,
+  '312': 0
+};
+
+for (let i = 0; i < 1000000; i++) {
+  let array = [1, 2, 3];
+  shuffle(array);
+  count[array.join('')]++;
+}
+
+// show counts of all possible permutations
+for (let key in count) {
+  alert(`${key}: ${count[key]}`);
+}
 
 /* 
 Let arr be an array.
@@ -4554,14 +4610,12 @@ otherwise we will push it into res array
 
 function unique(arr) {
     let array = [];
+    for (const item of arr) {
+        (!array.includes(item)) ? array.push(item) : 0;
+    }
 
-    const mappedArr = arr.map((item, index) => {
-        array.push(item);
-    });
-
-    return mappedArr;
+    return array;
 }
-
 console.log(unique(["Hare", "Krishna", "Hare", "Krishna",
   "Krishna", "Krishna", "Hare", "Hare", ":-O"]));
  
