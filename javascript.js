@@ -4503,9 +4503,69 @@ let myFavoriteFood = [["bacon", "raspberries"], "cheese"]
 //10. Array.from
 
 
-console.log(`My favorite foods are: ${myFavoriteFood.flat().join(", ")}`)
-console.log(`Your favorite foods are: ${yourFavoriteFood.flat().join(", ")}`)
+// console.log(`My favorite foods are: ${myFavoriteFood.flat().join(", ")}`)
+// console.log(`Your favorite foods are: ${yourFavoriteFood.flat().join(", ")}`);
+
+
+// Shuffle an array: 
+
+/*
+Shuffle an array
+importance: 3
+Write the function shuffle(array) that shuffles (randomly reorders) elements of the array.
+
+Multiple runs of shuffle may lead to different orders of elements. For instance:
+
+let arr = [1, 2, 3];
+
+shuffle(arr);
+// arr = [3, 2, 1]
+
+shuffle(arr);
+// arr = [2, 1, 3]
+
+shuffle(arr);
+// arr = [3, 1, 2]
+// ...
+
+
+All element orders should have an equal probability. For instance, [1,2,3] can be reordered as [1,2,3] or [1,3,2] or [3,1,2] etc, with equal probability of each case.
+*/ 
+
+function shuffle(array) {
+
+}
+
+
+
+
+/* 
+Let arr be an array.
+
+Create a function unique(arr) that should return an array with unique items of arr.
+
+For instance:
+
+Pseudocode :
+so we will have an resultant array and 
+we'll check if said item is already in array
+otherwise we will push it into res array
+*/ 
+
+function unique(arr) {
+    let array = [];
+
+    const mappedArr = arr.map((item, index) => {
+        array.push(item);
+    });
+
+    return mappedArr;
+}
+
+console.log(unique(["Hare", "Krishna", "Hare", "Krishna",
+  "Krishna", "Krishna", "Hare", "Hare", ":-O"]));
  
+
 
 
 
