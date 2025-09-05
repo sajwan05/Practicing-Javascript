@@ -4622,6 +4622,165 @@ console.log(unique(["Hare", "Krishna", "Hare", "Krishna",
 
 
 
+  console.log("Hello");
+
+const movies = ["The Shutter Island", "Zootopia", "Fight club", "The Wolf of Wall Street"];
+
+// You can store different types of elements within an array, including string, numbers, boolean and even objects.
+
+const elements = ["Hello", 7, {message : "Hi mom"}, true];
+
+console.log(movies);
+console.log(elements);
+console.log(movies.length);
+console.log(elements.length);
+
+const arr = [];
+
+console.log(arr.length);
+
+console.log(movies.forEach((item) => console.log(item)));
+
+for (const movie of movies) {
+    console.log(movie);
+}
+
+movies.push("Ghostbuster");
+console.log(movies);
+console.log(movies[movies.length -1 ]);
+
+movies.unshift('Pacific Rim');
+
+console.log(movies[0]);
+console.log(movies.length);
+movies.splice(0, 1);
+
+console.log(movies.length);
+
+
+// Excercise :01 Musketeers
+// WAP 
+const musketeers = ["Athos", "Porthos", "Aramis"];
+
+for (let i = 0; i < musketeers.length; i++) {
+    console.log(musketeers[i]);
+}
+
+musketeers.push("D'Artagnan");
+
+musketeers.forEach((musketeer) => console.log(musketeer));
+
+const index = musketeers.indexOf("Aramis");
+
+musketeers.splice(index, 1);
+
+for (const friend of musketeers) {
+    console.log(friend);
+}
+
+// Sum of values:
+// const values = [3, 11, 7, 2, 9, 10];
+// let sum = 0;
+// for (const value of values) {
+//     sum += value;
+// }
+// console.log(sum);
+
+// Array maximum:
+
+// 
+// const values = [3, 11, 7, 2, 9, 10];
+// let maxValue = Number.MIN_SAFE_INTEGER;
+
+// for (let i = 0; i < values.length; i++) {
+//     if (maxValue < values[i]) {
+//         maxValue = values[i];
+//     }
+// }
+
+// console.log(maxValue);
+
+//  const values = [3, 11, 7, 2, 9, 10];
+ 
+//  const descendingSortedArr = values.toSorted((a, b) => b - a);
+
+//  console.log(descendingSortedArr[0]);
+
+// let word = '';
+// let array = [];
+// do {
+//     word = prompt("Enter a number or enter stop to exit").toLowerCase();
+//     array.push(word);
+// }while(word !== "stop");
+// const list = array.splice(array.length - 1, 1);
+// console.log(array);
+
+
+// Objects:
+
+// Creating an object :
+
+const pen = {
+    type: "ballpoint",
+    color: "blue",
+    brand: "bick",
+};
+
+console.log(pen.type);
+console.log(pen.color);
+console.log(pen.brand);
+
+// console.log(`I write with a ${pen.color} ${pen.brand} ${pen.type} pen.`);
+
+// // modifying an object:
+
+// pen.color  = "red";
+
+// console.log(`I write with a ${pen.color} ${pen.brand} ${pen.type} pen.`);
+
+// pen.price = "10";
+
+// console.log(pen);
+// console.log(`My pen costs ${pen.price} INR`);
+
+
+// // RPG game object simple
+
+// const aurora = {
+//     name: "Aurora",
+//     health: 150,
+//     strength: 25,
+// };
+
+// console.log(`${aurora.name} has ${aurora.health} health points and ${aurora.strength} strength`);
+
+// // aurora is harmed by an arrow:
+
+// aurora.health -= 20;
+
+// // aurora got strength necklace
+
+// aurora.strength += 10;
+
+// console.log(`${aurora.name} has ${aurora.health} health points and ${aurora.strength} strength.`);
+
+// Adding method to an object 
+
+ const aurora = {
+    name: "Aurora",
+    health: 150,
+ };
+
+ aurora.strength = 25;
+
+// Return the character description:
+function describe(character) {
+    return `${character.name} has ${character.health} health points and ${character.strength} as strength`;
+}
+
+console.log(describe(aurora));
+
+
 
 
 
