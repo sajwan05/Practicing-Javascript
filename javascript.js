@@ -4904,27 +4904,57 @@ console.log(dog.cat());
 
 // Modelling a circle:
 
-const r = Number(prompt("Enter the circle radius:"));
+// const r = Number(prompt("Enter the circle radius:"));
 
-const circle = {
-    radius: r,
-    dia: 2 * r,
+// const circle = {
+//     radius: r,
+//     dia: 2 * r,
 
-    area() {
+//     area() {
         
-        return `Its area is ${(Math.PI * this.radius * this.radius).toFixed(2)}`;
-    },
+//         return `Its area is ${(Math.PI * this.radius * this.radius).toFixed(2)}`;
+//     },
 
-    circumference () {
-        return `Its circumference is ${(2 * Math.PI * this.radius).toFixed(2)}`;
+//     circumference () {
+//         return `Its circumference is ${(2 * Math.PI * this.radius).toFixed(2)}`;
+//     }
+
+// }
+
+// console.log(circle.area());
+// console.log(circle.circumference());
+
+// WAP
+    const account = {
+        name: "Alex",
+        balance: 0,
+
+        describe() {
+            return `owner: ${this.name} balance ${this.balance}`;
+        },
+
+        credit() {
+           this.balance += 250;
+           
+        },
+        debit () {
+            this.balance -= 80;
+        }
+
+        
     }
 
-}
+    console.log(account.describe());
+    account.credit();
+    account.debit();
 
-console.log(circle.area());
-console.log(circle.circumference());
+    console.log(account.describe());
 
+// Arrays 
+let listOfNumbers = [2, 3, 5, 7, 11];
 
+console.log(listOfNumbers[2]);
+console.log(listOfNumbers[0]);
 
 
 
