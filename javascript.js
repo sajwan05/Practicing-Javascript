@@ -4558,125 +4558,125 @@ All element orders should have an equal probability. For instance, [1,2,3] can b
 // console.log(shuffle([1, 2, 3]));
 // Fischer Yats algo
 
-function shuffle(array) {
-  for (let i = array.length - 1; i > 0; i--) {
-    let j = Math.floor(Math.random() * (i + 1)); // random index from 0 to i
+// function shuffle(array) {
+//   for (let i = array.length - 1; i > 0; i--) {
+//     let j = Math.floor(Math.random() * (i + 1)); // random index from 0 to i
 
-    // swap elements array[i] and array[j]
-    // we use "destructuring assignment" syntax to achieve that
-    // you'll find more details about that syntax in later chapters
-    // same can be written as:
-    let t = array[i]; array[i] = array[j]; array[j] = t
+//     // swap elements array[i] and array[j]
+//     // we use "destructuring assignment" syntax to achieve that
+//     // you'll find more details about that syntax in later chapters
+//     // same can be written as:
+//     let t = array[i]; array[i] = array[j]; array[j] = t
     
-  }
-  return array;
-}
+//   }
+//   return array;
+// }
 
-console.log(shuffle([1, 2, 3]));
+// console.log(shuffle([1, 2, 3]));
 
 
-let count = {
-  '123': 0,
-  '132': 0,
-  '213': 0,
-  '231': 0,
-  '321': 0,
-  '312': 0
-};
+// let count = {
+//   '123': 0,
+//   '132': 0,
+//   '213': 0,
+//   '231': 0,
+//   '321': 0,
+//   '312': 0
+// };
 
-for (let i = 0; i < 1000000; i++) {
-  let array = [1, 2, 3];
-  shuffle(array);
-  count[array.join('')]++;
-}
+// for (let i = 0; i < 1000000; i++) {
+//   let array = [1, 2, 3];
+//   shuffle(array);
+//   count[array.join('')]++;
+// }
 
-// show counts of all possible permutations
-for (let key in count) {
-  alert(`${key}: ${count[key]}`);
-}
+// // show counts of all possible permutations
+// for (let key in count) {
+//   alert(`${key}: ${count[key]}`);
+// }
 
-/* 
-Let arr be an array.
+// /* 
+// Let arr be an array.
 
-Create a function unique(arr) that should return an array with unique items of arr.
+// Create a function unique(arr) that should return an array with unique items of arr.
 
-For instance:
+// For instance:
 
-Pseudocode :
-so we will have an resultant array and 
-we'll check if said item is already in array
-otherwise we will push it into res array
-*/ 
+// Pseudocode :
+// so we will have an resultant array and 
+// we'll check if said item is already in array
+// otherwise we will push it into res array
+// */ 
 
-function unique(arr) {
-    let array = [];
-    for (const item of arr) {
-        (!array.includes(item)) ? array.push(item) : 0;
-    }
+// function unique(arr) {
+//     let array = [];
+//     for (const item of arr) {
+//         (!array.includes(item)) ? array.push(item) : 0;
+//     }
 
-    return array;
-}
-console.log(unique(["Hare", "Krishna", "Hare", "Krishna",
-  "Krishna", "Krishna", "Hare", "Hare", ":-O"]));
+//     return array;
+// }
+// console.log(unique(["Hare", "Krishna", "Hare", "Krishna",
+//   "Krishna", "Krishna", "Hare", "Hare", ":-O"]));
  
 
 
 
-  console.log("Hello");
+//   console.log("Hello");
 
-const movies = ["The Shutter Island", "Zootopia", "Fight club", "The Wolf of Wall Street"];
+// const movies = ["The Shutter Island", "Zootopia", "Fight club", "The Wolf of Wall Street"];
 
-// You can store different types of elements within an array, including string, numbers, boolean and even objects.
+// // You can store different types of elements within an array, including string, numbers, boolean and even objects.
 
-const elements = ["Hello", 7, {message : "Hi mom"}, true];
+// const elements = ["Hello", 7, {message : "Hi mom"}, true];
 
-console.log(movies);
-console.log(elements);
-console.log(movies.length);
-console.log(elements.length);
+// console.log(movies);
+// console.log(elements);
+// console.log(movies.length);
+// console.log(elements.length);
 
-const arr = [];
+// // const arr = [];
 
-console.log(arr.length);
+// console.log(arr.length);
 
-console.log(movies.forEach((item) => console.log(item)));
+// console.log(movies.forEach((item) => console.log(item)));
 
-for (const movie of movies) {
-    console.log(movie);
-}
+// for (const movie of movies) {
+//     console.log(movie);
+// }
 
-movies.push("Ghostbuster");
-console.log(movies);
-console.log(movies[movies.length -1 ]);
+// movies.push("Ghostbuster");
+// console.log(movies);
+// console.log(movies[movies.length -1 ]);
 
-movies.unshift('Pacific Rim');
+// movies.unshift('Pacific Rim');
 
-console.log(movies[0]);
-console.log(movies.length);
-movies.splice(0, 1);
+// console.log(movies[0]);
+// console.log(movies.length);
+// movies.splice(0, 1);
 
-console.log(movies.length);
+// console.log(movies.length);
 
 
-// Excercise :01 Musketeers
-// WAP 
-const musketeers = ["Athos", "Porthos", "Aramis"];
+// // Excercise :01 Musketeers
+// // WAP 
+// const musketeers = ["Athos", "Porthos", "Aramis"];
 
-for (let i = 0; i < musketeers.length; i++) {
-    console.log(musketeers[i]);
-}
+// for (let i = 0; i < musketeers.length; i++) {
+//     console.log(musketeers[i]);
+// }
 
-musketeers.push("D'Artagnan");
+// musketeers.push("D'Artagnan");
 
-musketeers.forEach((musketeer) => console.log(musketeer));
+// musketeers.forEach((musketeer) => console.log(musketeer));
 
-const index = musketeers.indexOf("Aramis");
+// const index = musketeers.indexOf("Aramis");
 
-musketeers.splice(index, 1);
+// musketeers.splice(index, 1);
 
-for (const friend of musketeers) {
-    console.log(friend);
-}
+// for (const friend of musketeers) {
+//     console.log(friend);
+// }
 
 // Sum of values:
 // const values = [3, 11, 7, 2, 9, 10];
@@ -4720,72 +4720,104 @@ for (const friend of musketeers) {
 
 // Creating an object :
 
+// const pen = {
+//     type: "ballpoint",
+//     color: "blue",
+//     brand: "bick",
+// };
+
+// console.log(pen.type);
+// console.log(pen.color);
+// console.log(pen.brand);
+
+// // console.log(`I write with a ${pen.color} ${pen.brand} ${pen.type} pen.`);
+
+// // // modifying an object:
+
+// // pen.color  = "red";
+
+// // console.log(`I write with a ${pen.color} ${pen.brand} ${pen.type} pen.`);
+
+// // pen.price = "10";
+
+// // console.log(pen);
+// // console.log(`My pen costs ${pen.price} INR`);
+
+
+// // // RPG game object simple
+
+// // const aurora = {
+// //     name: "Aurora",
+// //     health: 150,
+// //     strength: 25,
+// // };
+
+// // console.log(`${aurora.name} has ${aurora.health} health points and ${aurora.strength} strength`);
+
+// // // aurora is harmed by an arrow:
+
+// // aurora.health -= 20;
+
+// // // aurora got strength necklace
+
+// // aurora.strength += 10;
+
+// // console.log(`${aurora.name} has ${aurora.health} health points and ${aurora.strength} strength.`);
+
+// // Adding method to an object 
+
+//  const aurora = {
+//     name: "Aurora",
+//     health: 150,
+//  };
+
+//  aurora.strength = 25;
+
+// // Return the character description:
+// function describe(character) {
+//     return `${character.name} has ${character.health} health points and ${character.strength} as strength`;
+// }
+
+// console.log(describe(aurora));
+
 const pen = {
     type: "ballpoint",
     color: "blue",
-    brand: "bick",
+    brand: "Bic",
 };
 
-console.log(pen.type);
-console.log(pen.color);
 console.log(pen.brand);
 
-// console.log(`I write with a ${pen.color} ${pen.brand} ${pen.type} pen.`);
+console.log(`I write with a ${pen.color} ${pen.brand} ${pen.type} pen.`);
 
-// // modifying an object:
+pen.color = "red";
 
-// pen.color  = "red";
+console.log(pen);
 
-// console.log(`I write with a ${pen.color} ${pen.brand} ${pen.type} pen.`);
+pen.price = "10";
 
-// pen.price = "10";
+console.log(pen);
 
-// console.log(pen);
-// console.log(`My pen costs ${pen.price} INR`);
+//  Let's try something cooler and create a mini-role playing game (RPG) using objects
 
-
-// // RPG game object simple
-
-// const aurora = {
-//     name: "Aurora",
-//     health: 150,
-//     strength: 25,
-// };
-
-// console.log(`${aurora.name} has ${aurora.health} health points and ${aurora.strength} strength`);
-
-// // aurora is harmed by an arrow:
-
-// aurora.health -= 20;
-
-// // aurora got strength necklace
-
-// aurora.strength += 10;
-
-// console.log(`${aurora.name} has ${aurora.health} health points and ${aurora.strength} strength.`);
-
-// Adding method to an object 
-
- const aurora = {
+const aurora = {
     name: "Aurora",
     health: 150,
- };
+    strength: 25,
+};
 
- aurora.strength = 25;
+console.log(`${aurora.name} has ${aurora.health} health points and ${aurora.strength} strength.`);
 
-// Return the character description:
-function describe(character) {
-    return `${character.name} has ${character.health} health points and ${character.strength} as strength`;
-}
+// // Aurora is harmed by an arrow
+aurora.health -= 20;
 
-console.log(describe(aurora));
+// aurora got an strength necklace
 
+aurora.strength += 10;
 
+console.log(aurora);
 
-
-
-
-
+console.log(`${aurora.name} has ${aurora.health} as health points and ${aurora.strength} as strength`);
 
 
 
