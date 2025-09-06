@@ -4881,6 +4881,29 @@ const aurora = {
 console.log(aurora.describe());
 
 
+// Modeling a dog 
+
+const dog = {
+    name: "Goofy",
+    species: "Beagal",
+    size: 50,
+    bark: "Grrr! Grrr!",
+
+    describe() {
+        return `${this.name} is a ${this.species} dog measuring ${this.size}`;
+    },
+
+    cat () {
+        return `Look, a cat! ${this.name} barks: ${this.bark}`;
+    },
+};
+
+console.log(dog.describe());
+console.log(dog.cat());
+
+
+
+
 
 
 
