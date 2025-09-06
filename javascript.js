@@ -4821,17 +4821,35 @@ All element orders should have an equal probability. For instance, [1,2,3] can b
 
 // Adding a method to an object: 
 
+// const aurora = {
+//     name: "Aurora",
+//     health: 150,
+//     strength: 25,
+// };
+
+// function describe (character) {
+//     return `${character.name} has ${character.health} health points and ${character.strength} as strength.`;
+// }
+
+// console.log(describe(aurora));
+
+// Alternative approach, using describe() property inside the object:
+
 const aurora = {
     name: "Aurora",
     health: 150,
     strength: 25,
+
+
+    describe() {
+        return `${this.name} has ${this.health} health points and ${this.strength} strength.`;
+    }
 };
 
-function describe (character) {
-    return `${character.name} has ${character.health} health points and ${character.strength} as strength.`;
-}
+console.log(aurora.describe());
 
-console.log(describe(aurora));
+
+
 
 
 
