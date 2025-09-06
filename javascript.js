@@ -4902,6 +4902,29 @@ console.log(dog.describe());
 console.log(dog.cat());
 
 
+// Modelling a circle:
+
+const r = Number(prompt("Enter the circle radius:"));
+
+const circle = {
+    radius: r,
+    dia: 2 * r,
+
+    area() {
+        
+        return `Its area is ${(Math.PI * this.radius * this.radius).toFixed(2)}`;
+    },
+
+    circumference () {
+        return `Its circumference is ${(2 * Math.PI * this.radius).toFixed(2)}`;
+    }
+
+}
+
+console.log(circle.area());
+console.log(circle.circumference());
+
+
 
 
 
