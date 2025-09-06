@@ -4835,18 +4835,52 @@ All element orders should have an equal probability. For instance, [1,2,3] can b
 
 // Alternative approach, using describe() property inside the object:
 
+// const aurora = {
+//     name: "Aurora",
+//     health: 150,
+//     strength: 25,
+
+
+//     describe() {
+//         return `${this.name} has ${this.health} health points and ${this.strength} strength.`;
+//     }
+// };
+
+// console.log(aurora.describe());
+
+
+
+// Coding time!
+
+// Adding character experience:
+
 const aurora = {
     name: "Aurora",
     health: 150,
     strength: 25,
+    xp: 0,
 
+    describe () {
 
-    describe() {
-        return `${this.name} has ${this.health} health points and ${this.strength} strength.`;
+        // Aurora is harmed by an arrow:
+
+        this.health -= 20;
+
+        // Aurora equips an strength necklace
+
+        this.strength += 10;
+
+        // Aurora learns a new skill:
+
+        this.xp += 15;
+
+        return `${this.name} has ${this.health} health points and ${this.xp} experience and ${this.strength} strength.`;
     }
 };
 
 console.log(aurora.describe());
+
+
 
 
 
