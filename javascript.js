@@ -4780,25 +4780,46 @@ All element orders should have an equal probability. For instance, [1,2,3] can b
 
 // console.log(describe(aurora));
 
-const pen = {
-    type: "ballpoint",
-    color: "blue",
-    brand: "Bic",
-};
+// const pen = {
+//     type: "ballpoint",
+//     color: "blue",
+//     brand: "Bic",
+// };
 
-console.log(pen.brand);
+// console.log(pen.brand);
 
-console.log(`I write with a ${pen.color} ${pen.brand} ${pen.type} pen.`);
+// console.log(`I write with a ${pen.color} ${pen.brand} ${pen.type} pen.`);
 
-pen.color = "red";
+// pen.color = "red";
 
-console.log(pen);
+// console.log(pen);
 
-pen.price = "10";
+// pen.price = "10";
 
-console.log(pen);
+// console.log(pen);
 
-//  Let's try something cooler and create a mini-role playing game (RPG) using objects
+// //  Let's try something cooler and create a mini-role playing game (RPG) using objects
+
+// const aurora = {
+//     name: "Aurora",
+//     health: 150,
+//     strength: 25,
+// };
+
+// console.log(`${aurora.name} has ${aurora.health} health points and ${aurora.strength} strength.`);
+
+// // // Aurora is harmed by an arrow
+// aurora.health -= 20;
+
+// // aurora got an strength necklace
+
+// aurora.strength += 10;
+
+// console.log(aurora);
+
+// console.log(`${aurora.name} has ${aurora.health} as health points and ${aurora.strength} as strength`);
+
+// Adding a method to an object: 
 
 const aurora = {
     name: "Aurora",
@@ -4806,19 +4827,11 @@ const aurora = {
     strength: 25,
 };
 
-console.log(`${aurora.name} has ${aurora.health} health points and ${aurora.strength} strength.`);
+function describe (character) {
+    return `${character.name} has ${character.health} health points and ${character.strength} as strength.`;
+}
 
-// // Aurora is harmed by an arrow
-aurora.health -= 20;
-
-// aurora got an strength necklace
-
-aurora.strength += 10;
-
-console.log(aurora);
-
-console.log(`${aurora.name} has ${aurora.health} as health points and ${aurora.strength} as strength`);
-
+console.log(describe(aurora));
 
 
 
