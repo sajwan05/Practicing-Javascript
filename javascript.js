@@ -4980,35 +4980,131 @@ console.log(listOfNumbers[0]);
 
 // Alternative Approach:
 
-const sumAll = function(min, max) {
-    if (!Number.isInteger(min) || !Number.isInteger(max)) return `ERROR`;   
-    if (min < 0 || max < 0) return `ERROR`;
+// const sumAll = function(min, max) {
+//     if (!Number.isInteger(min) || !Number.isInteger(max)) return `ERROR`;   
+//     if (min < 0 || max < 0) return `ERROR`;
 
-    if (min > max) {
-        let t = min;
-        min = max;
-        max = t;
-    }
+//     if (min > max) {
+//         let t = min;
+//         min = max;
+//         max = t;
+//     }
 
-    let sum = 0;
+//     let sum = 0;
 
-    for (let i = min; i <= max; i++){
-        sum += i;
-    }
+//     for (let i = min; i <= max; i++){
+//         sum += i;
+//     }
 
-    return sum;
+//     return sum;
+// }
+
+
+// const convertToCelsius = function(temp) {
+//   temp = Math.round(((temp - 32) * (5/9)) * 10) / 10;
+//   return temp;
+// };
+
+// const convertToFahrenheit = function(temp) {
+//   temp = Math.round((temp *  9/5 + 32) * 10) /10; 
+//   return temp; 
+// };
+
+// Javascript demo : The arguments object:
+
+func1(1, 2, 3);
+function func1(a, b, c) {
+    console.log(arguments[0]);
+
+    console.log(arguments[1]);
+
+
+    console.log(arguments[2]);
 }
 
+function myFun(a, b, ...manyMore) {
+    console.log("a", a);
+    console.log("b", b);
+    console.log("manyMoreArg", manyMore);
+}
 
-const convertToCelsius = function(temp) {
-  temp = Math.round(((temp - 32) * (5/9)) * 10) / 10;
-  return temp;
-};
+myFun("one", "two", "three", "four", "five", "six");
 
-const convertToFahrenheit = function(temp) {
-  temp = Math.round((temp *  9/5 + 32) * 10) /10; 
-  return temp; 
-};
+myFun("one", "two", "three");
+
+myFun("one", "two");
+
+myFun("one");
+
+
+
+// *Variables*
+// Declare a variable, reassign it to your fav holiday, make sure it is in all caps, and print the value to the console
+
+const favHoliday = "Europe";
+console.log(favHoliday.toUpperCase());
+//Declare a variable, assign it a string, alert the last three characters in the string (Use your google-fu and the MDN)
+let string;
+string = "hello";
+console.log(string.slice(-3));
+// *Functions*
+// Create a function that takes in 5 numbers. Subtract all five from 100. Alert the absolute value of the difference. Call the function.
+
+function calculate (n1, n2, n3, n4, n5) {
+    let sum = 100 -(n1 + n2+ n3 + n4+ n5);
+    return Math.abs(sum);
+}
+
+console.log(calculate(1, 2, 56, 6, 8));
+
+// Create a function that takes in 3 numbers. Console log lowest and highest values. Call the function.
+function highAndLows (n1, n2, n3) {
+   let min = Math.min(n1, n2, n3);
+   let max = Math.max(n1, n2, n3);
+
+   return ` Minimum: ${min} Maximum: ${max}`;
+}
+
+console.log(highAndLows(34, 6, 33));
+
+// *Conditionals*
+//Create a function that returns heads or tails randomly and as fairly as possible. Call the function.
+
+function headAndTails () {
+    let num = Math.random();
+    return num < 0.5 ? `Tails` : `Heads`;
+}
+
+console.log(headAndTails());
+
+//*Loops*
+//Create a function that takes in a number. Console log the result of heads or tails using the previous function x times where x is the number passed into the function. Call the function.
+function headsAndTail (num) {
+    for (let i = 0; i < num; i++) {
+        console.log(headAndTails());
+    }
+}
+
+headsAndTail(6);
+
+
+
+// Create a function that takes in an array. If the first number, is less than the last number, alert "Hi". If the first number is greater than the last number, alert "Bye". If they are equal, alert "We close in an hour".
+
+function status(array) {
+    if (array[0] < array[array.length-1]) {
+        console.log("Hi!");
+    }else if(array[0] === array[array.length -1]){
+        console.log("We are closing in one hour");
+    }else {
+        console.log("Bye");
+    }
+}
+
+status([3, 4, 5, 6, 7, 3]);
+status([3, 4, 5, 6, 7, 6]);
+status([3, 4, 5, 6, 7, 1]);
+
 
 
 
