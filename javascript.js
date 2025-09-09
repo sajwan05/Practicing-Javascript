@@ -5196,6 +5196,29 @@ function palind (str) {
 console.log(palind("yay"));
 
 
+//Create a stopwatch object that has four properties and three methods
+
+const stopWatch = {
+    color: "black",
+    shape: "round",
+    brand: "xyz",
+    time: 3,
+
+    tellTime : function() {
+        return `Time is ${this.time}`;
+    },
+
+    stop : function() {
+        return `Watch is stopped at ${this.time}`;
+    },
+
+    start : function () {
+        this.time = 0;
+        return `Start from ${this.time}`;
+    }
+}
+
+
 
 
 
