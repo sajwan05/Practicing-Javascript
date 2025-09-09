@@ -5155,6 +5155,47 @@ let result = playGameXTimes(["rock", "paper", "paper", "rock", "scissors", "rock
 // console.log(result);
 
 
+//Arrays
+
+//Create and array of numbers. Sum all of the numbers. Alert the sum.
+const numbers = [1, 2, 3, 56, 67];
+
+let sum = numbers.reduce((total, item) => total + item,0);
+
+console.log(sum);
+
+//Create a function that takes in an array of numbers
+//Return a new array of numbers that is every original number squared
+
+
+function squared (array) {
+    let mapped = array.map((item) => item ** 2);
+    return mapped;
+}
+
+console.log(squared([1, 2, 3, 4, 5]));
+//Create a function that takes string
+//Print the reverse of that string to the console
+
+function reverseStr(str) {
+    return str.split("").toReversed().join("");
+}
+
+console.log(reverseStr("Hello"));
+//Create a function that takes in a string
+//Alert if the string is a palindrome or not
+
+function palind (str) {
+    if (str[0] === str[str.length - 1]){
+        console.log("Probably a palindrome");
+    }else {
+        console.log("No chance");
+    }
+}
+
+console.log(palind("yay"));
+
+
 
 
 
