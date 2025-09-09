@@ -5108,6 +5108,55 @@ status([3, 4, 5, 6, 7, 1]);
 
 
 
+// Create a function that returns rock, paper, or scissors as randomly as possible
+
+function rockPaperScissors() {
+    let random = Math.floor(Math.random() * 3) + 1;
+    if (random === 1) {
+        return `rock`;
+    }else if (random === 2) {
+        return `paper`;
+    }else {
+        return `scissors`;
+    }
+}
+
+// console.log(rockPaperScissors());
+
+
+// *Conditionals*
+//Create a function that takes in a choice (rock, paper, or scissors) and determines if they won a game of rock paper scissors against a bot using the above function
+
+function whoWins(userChoice) {
+    let botChoice = rockPaperScissors();
+
+    if (userChoice === botChoice) {
+        return `It's a Tie`;
+    }else if ((userChoice === "rock" && botChoice === "scissors") || (userChoice === "paper" && botChoice === "rock") || (userChoice === "scissors" && botChoice === "paper")) {
+        return `You wins!`;
+    }else {
+        return `You lose!`;
+    }
+}
+
+// console.log(whoWins(userChoice));
+
+//*Loops*
+//Create a function that takes an array of choices. Play the game x times where x is the number of choices in the array. Print the results of each game to the console.
+
+function playGameXTimes (array) {
+  
+    array.forEach((choice) => console.log(whoWins(choice)));
+   
+}
+
+let result = playGameXTimes(["rock", "paper", "paper", "rock", "scissors", "rock", "scissors", "scissors", "rock"]);
+
+// console.log(result);
+
+
+
+
 
 
 
