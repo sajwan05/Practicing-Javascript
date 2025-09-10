@@ -5465,14 +5465,37 @@ console.log("  okay \n".trim());
 
 console.log(String(6).padStart(3, "0"));
 
-let sentence = "Secretarybirds specialize in stomping";
-let words = sentence.split(" ");
-console.log(words);
+// let sentence = "Secretarybirds specialize in stomping";
+// let words = sentence.split(" ");
+// console.log(words);
 
-console.log(words.join(". "));
+// console.log(words.join(". "));
 
-console.log("LA".repeat(3));
+// console.log("LA".repeat(3));
 
+
+// REST PARAMETERS:
+
+function max(...numbers) {
+    let result = -Infinity;
+    for (let number of numbers) {
+        if (number > result) result = number;
+    }
+    return result;
+}
+
+console.log(max(4, 1, 9, -2));
+
+let number = [5, 1, 7];
+console.log(max(...number));
+
+
+let words = ["never", "fully"];
+console.log(["will", ...words, "understand"]);
+
+let coordinates = {x: 10, y: 0};
+
+console.log({...coordinates, y: 5, z: 1});
 
 
 
