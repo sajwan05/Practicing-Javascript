@@ -5351,15 +5351,101 @@ console.log(obj === obj2);
 
 // the lycanthrope's log
 journal = [];
+console.log(journal);
 
 function addEntry(events, squirrel) {
-    journal.push(events, squirrel);
+    journal.push({events, squirrel});
 }
 
+addEntry(["work", "touched tree", "pizza", "running", "television"], false);
+
+addEntry(["work", "ice cream", "cauliflower", "lasagna", "touched tree", "brushed teeth"], false);
+
+addEntry(["weekend", "cycling", "break", "peanuts", "beer"], true);
+
+// to calculate co-relation : phi
+
+function phi(table) {
+    return (table[3] * table[0] -  table[2] * table[1])/
+Math.sqrt((table[2] + table[3]) *
+         (table[0] + table[1]) *
+         (table[1] + table[3]) *
+         (table[0] + table[2])
+);
+}
+
+console.log(phi([76, 9, 4, 1]).toFixed(4));
+
+
+let todoList = [];
+function remember(task) {
+    todoList.push(task);
+}
+
+// function getTask() {
+//     return todoList.shift();
+// }
+remember("study");
+console.log(todoList);
+
+function getTask() {
+    return todoList.shift();
+}
+getTask();
+console.log(todoList);
+
+function rememberUrgently(task) {
+    return todoList.unshift(task);
+}
+
+rememberUrgently("groceries");
+console.log(todoList);
+
+console.log([1, 2, 3, 2,4, 5, 2, 3, 5, 1].indexOf(2));
+console.log([1,2,3,2,1].lastIndexOf(2));
+const numbers1 = [1, 2, 3, 2,4, 5, 2, 3, 5, 1];
+const firstOccurence = numbers1.indexOf(2);
+console.log(firstOccurence);
+
+const secOccuOfTwo = numbers1.indexOf(2, firstOccurence + 1);
+console.log(secOccuOfTwo);
+
+const lastOccuOfTwo = numbers1.lastIndexOf(2);
+console.log(lastOccuOfTwo);
+
+
+let arrays = [0, 1, 2, 3, 4];
+
+const sliced = arrays.slice(2, 4);
+console.log(sliced);
+
+console.log(arrays.slice(2));
+
+// The following example shows both concat and slice in action. It takes an array and an index and returns a new array that is a copy of the original array with the element at the given index removed:
+
+function remove (array, index) {
+    return array.slice(0, index)
+    .concat(array.slice(index + 1));
+}
+
+let arrayss = ["a", "b", "c", "d", "e", "f"];
+
+console.log(remove(arrayss, 1));
 
 
 
+// 
 
+
+
+function removeAtIndexCopy (array, index) {
+    return array.slice(0, index).
+    concat(array.slice(index + 1));
+}
+
+const a = [2, 3, 4, 5, 6, 56,7,8,8];
+
+console.log(removeAtIndexCopy(a, a.length - 1));
 
 
 
