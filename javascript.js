@@ -5497,7 +5497,31 @@ let coordinates = {x: 10, y: 0};
 
 console.log({...coordinates, y: 5, z: 1});
 
+// THE MATH OBJECT:
 
+
+function randomPointOnCircle(radius) {
+    let angle = Math.random() * 2 * Math.PI;
+
+    return {x: radius * Math.cos(angle),
+            y: radius * Math.sin(angle)
+    };
+}
+
+console.log(randomPointOnCircle(2));
+
+
+// serialize the data so we use JSON 
+
+// {
+//     "squirrel": false,
+//     "events" : ["work", "touched tree", "pizza", "running"]
+// }
+
+string = JSON.stringify({squirrel : false, events: ["weekend"]});
+console.log(string);
+
+console.log(JSON.parse(string).events);
 
 
 
