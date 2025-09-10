@@ -5272,11 +5272,89 @@ console.log(anObject.left);
 console.log("left" in anObject);
 console.log("right" in anObject);
 
+// To find out what properties an object has, you can use the Object.keys function.
+
+const Hey = {
+    x: 0,
+    y: 1,
+    z: 2,
+}
+
+console.log(Object.keys(Hey));
+
+console.log(Object.keys(day1));
 
 
 
+// There's an Object.assign function that copies all properties from one object into another:
+
+let objectA = {a: 1, b: 2};
+
+Object.assign(objectA, {b: 3, c: 4});
+
+console.log(objectA);
+
+// Then array are just kind of object specialized for storing sequences of things.
+
+// Jacques will represent the journal that Jacques keeps as an array of objects:
+
+let journal = [
+    {events: ["work", "touched tree", "pizza", "television", "running"],
+        squirrel: false,
+    },
+    {events: ["work", "ice cream", "cauliflower", "lasagna", "touched tree", "brushed teeth"],
+        squirrel: false,
+    },
+
+    {events: ["weekend", "cycling", "break", "peanuts", "beer"],
+        squirrel: true,
+    },
+];
+
+console.log(journal[journal.length - 1]);
+
+// Mutability
+
+// numbers, string and booleans are immutable they can't be changed.
+// BUT objects can be changed.
+// There is a differnce between having two reference to the same object and having two different objects that contain the same properties.
+
+let object1 = {value: 10};
+let object2 = object1;
+
+let object3 = {value: 10};
+
+console.log(object1 === object2);
+console.log(object1 === object3);
+
+object1.value = 15;
+console.log(object2.value);
+console.log(object1);
+console.log(object3.value);
 
 
+const score = {visitors: 0, home: 0};
+score.visitors = 1;
+console.log(score);
+
+// score = {visitors: 1, home: 0}; tHIS ISN'T ALLOWED
+
+const obj = {value: 10};
+const obj1 = {vlaue: 10};
+
+console.log(obj == obj1);
+
+const obj2 = obj;
+console.log(obj2);
+console.log(obj === obj2);
+
+
+// the lycanthrope's log
+journal = [];
+
+function addEntry(events, squirrel) {
+    journal.push(events, squirrel);
+}
 
 
 
