@@ -5157,12 +5157,12 @@ let result = playGameXTimes(["rock", "paper", "paper", "rock", "scissors", "rock
 
 //Arrays
 
-//Create and array of numbers. Sum all of the numbers. Alert the sum.
-const numbers = [1, 2, 3, 56, 67];
+// //Create and array of numbers. Sum all of the numbers. Alert the sum.
+// const numbers = [1, 2, 3, 56, 67];
 
-let sum = numbers.reduce((total, item) => total + item,0);
+// let sum = numbers.reduce((total, item) => total + item,0);
 
-console.log(sum);
+// console.log(sum);
 
 //Create a function that takes in an array of numbers
 //Return a new array of numbers that is every original number squared
@@ -5523,5 +5523,81 @@ console.log(string);
 
 console.log(JSON.parse(string).events);
 
+// EXCERCISES: Eloquent JS chapter 4
+
+// The sum of a range:
+
+// we will iterate through start till end inclusive and add them to a sum for getting total that's it
+
+function range(start, end, step = 1) {
+    let arr = [];
+    if (start > end) {
+        for (let i = start; i >= end; i+= step){
+            arr.push(i);
+        }
+    }else {
+        for (let i = start; i <= end; i+= step) {
+            arr.push(i);
+        }
+    }
+
+  return arr;
+}
+
+
+
+function sum(array) {
+    
+   let  res = array;
+   
+    return res.reduce((total, num) => total + num , 0);
+} 
+
+console.log(range(1, 10, 2));
+console.log(range(5, 2, -1));
+console.log(sum(range(1, 10)));
+
+
+// Reversing an array 
+// one reverse and other one reverse in place:
+
+function reverseArray(array) {
+    // so we have to iterate from last element and gonna push it to the new array and we'll be down with the array 
+
+    let arr = [];
+
+    for (let i =  array.length - 1; i >= 0; i-- ){
+        arr.push(array[i]);
+    }
+
+    return arr;
+}
+
+let myArray = ["A", "B", "C"];
+
+console.log(reverseArray(myArray));
+console.log(myArray);
+
+function reverseArrInPlace (array) {
+    // Pseudocode:
+
+    // first of all we can iterate through the array,
+    // with two pointer one will point at start 
+    // and other point at end
+    // then we gonna iterate just till length of array by 2 
+    // because then we'll be swapping elements with each other
+
+    for (let i = 0, j = array.length - 1; i < Math.floor(array.length/2); i++, j--) {
+        // [array[i], array[j]] = [array[j], array[i]];
+        let t = array[i];
+        array[i] = array[j];
+        array[j] = t;
+    }
+
+    return array;
+
+}
+
+console.log(reverseArrInPlace([1, 2, 3, 4, 5, 6, 7, 8, 9]));
 
 
