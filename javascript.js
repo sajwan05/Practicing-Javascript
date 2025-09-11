@@ -5600,4 +5600,77 @@ function reverseArrInPlace (array) {
 
 console.log(reverseArrInPlace([1, 2, 3, 4, 5, 6, 7, 8, 9]));
 
+// const container = document.querySelector("#container");
+// const display = container.firstElementChild;
+
+// console.log(display);
+
+// const controls = document.querySelector(".controls");
+
+// const display1 = controls.previousElementSibling;
+
+// console.log(display1);
+
+const container = document.querySelector("#container");
+
+let display = container.firstElementChild;
+
+console.log(display);
+
+const controls = document.querySelector(".controls");
+
+display = controls.previousElementSibling;
+
+console.log(display);
+
+// To create an element 
+
+const div = document.createElement("div");
+
+
+container.insertBefore(div, display);
+container.appendChild(div);
+
+
+let removed = container.removeChild(div);
+
+console.log(removed);
+
+function removeEveryOther(arr){
+  return arr.filter(function(elem, index) {
+    return index % 2 === 0;
+  });
+}
+// 34 similar code variations are grouped with this one
+// Show Variations
+
+// Date 11 september 2025
+// Codewars
+function removeEveryOther(arr){
+  //your code here
+//   let array = [];
+  
+//   for (let i = 0; i < arr.length; i++) {
+//     if (i % 2 === 0) {
+//       array.push(arr[i]);
+//     }
+//   }
+//   return array;
+  
+  return arr.filter((item, index) => {
+    if (index % 2 === 0) return item;
+  })
+  
+  //Pseudocode
+//   Okay so we have to remove every second element
+// we intialize a new array 
+// Then we gonna iterate through it from 0 to length of array - 1
+// then we'll check if index is even and push it into the new array
+//because every 2nd element is odd index
+// and return new array voila.
+// or we can use filter to filter even index every 2nd element is basically evey odd index
+}
+
+
+
 
