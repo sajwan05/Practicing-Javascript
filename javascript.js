@@ -5657,10 +5657,15 @@ function removeEveryOther(arr){
 //   }
 //   return array;
   
-  return arr.filter((item, index) => {
-    if (index % 2 === 0) return item;
-  })
+//   return arr.filter((item, index) => {
+//     if (index % 2 === 0) return item;
+//   })
+
+//   Above solution 2nd one is wrong because for falsy values it will not return even if it is at odd index.
   
+// So the solution will be
+
+return arr.filter((_, index) => index % 2 === 0);
   //Pseudocode
 //   Okay so we have to remove every second element
 // we intialize a new array 
