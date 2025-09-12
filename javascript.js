@@ -5637,7 +5637,7 @@ let removed = container.removeChild(div);
 console.log(removed);
 
 function removeEveryOther(arr){
-  return arr.filter(function(elem, index) {
+  return arr.filter(function(_, index) {
     return index % 2 === 0;
   });
 }
@@ -5675,6 +5675,126 @@ return arr.filter((_, index) => index % 2 === 0);
 // and return new array voila.
 // or we can use filter to filter even index every 2nd element is basically evey odd index
 }
+
+/*
+Dom manipulation
+*/ 
+
+const container1 = document.querySelector("#container");
+
+// const display1 = document.querySelector(".display");
+
+// const display1 = container1.querySelector(".display");
+
+const display1 = container.firstElementChild;
+const controls1 = document.querySelector(".controls");
+const display2 = controls.previousElementSibling;
+console.log(container1);
+console.log(display1);
+
+console.log(display2);
+
+const division = document.createElement("div");
+
+// container.appendChild(division);
+
+container.insertBefore(division, display);
+
+const removedChild = container.removeChild(division);
+
+console.log(division);
+container.insertBefore(div, controls);
+// Altering elements:
+// Adding Inline styles:
+// Add the indicated style rule to the element in the div variable 
+div.style.color = "blue";
+div.textContent = "Hello, my favorite color is blue";
+
+// adds several style rules:
+
+div.style.cssText = "color: blue; background: pink;";
+
+// adds several style rules: 
+
+div.setAttribute("style", "color: red; background: cyan; text-transform: uppercase;");
+
+// dot notation with kebab case: doesn't work as it attempts to subtract color from div.style.background
+// equivalent to : div.style.background -color
+// div.style.background-color;
+
+// dot notation with camelCase: works, access the div's background-color style
+
+div.style.backgroundColor;
+
+// bracket notation with kebab-case: also works
+div.style["background-color"];
+
+// bracket notatin with camelCase: also works
+
+div.style["backgroundColor"];
+console.log(div);
+
+
+// Adding inline style:
+
+// adds the indicated style rule to the element in the div variable
+
+div.style.color = "red";
+
+div.style.cssText = "color:blue; background:blue; listStyle:none;";
+
+div.setAttribute("style", "color: red; backgroundColor: cyan;");
+
+
+div.style.backgroundColor;
+
+div.style["background-color"];
+
+div.style["backgroundColor"];
+
+
+
+// Editing attributes
+
+div.setAttribute("id", "theDiv");
+
+const id = div.getAttribute("id");
+
+console.log(id);
+
+// Remove specified attributes:
+
+div.removeAttribute("id");
+
+// working with classes
+
+// adds class "new" to your new div
+
+div.classList.add("new");
+
+// removes "new class from div
+
+div.classList.remove("new");
+
+// if div doesn't have a class 
+// "active" then add it otherwise remove it
+
+div.classList.toggle("active");
+
+// It is often standard (and cleaner) to toggle a CSS style rather than adding and removing inline CSS.
+
+
+// Adding text content:
+
+// creates a text node containing 'hello world!" and insert it in div"
+
+div.textContent = "Hello, World!";
+
+
+// Adding HTML content
+
+// renders the HTML inside div
+div.innerHTML = "<h1>Hello World!</h1>"
 
 
 
