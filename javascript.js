@@ -5611,30 +5611,30 @@ console.log(reverseArrInPlace([1, 2, 3, 4, 5, 6, 7, 8, 9]));
 
 // console.log(display1);
 
-const container = document.querySelector("#container");
+// const container = document.querySelector("#container");
 
-let display = container.firstElementChild;
+// let display = container.firstElementChild;
 
-console.log(display);
+// console.log(display);
 
-const controls = document.querySelector(".controls");
+// const controls = document.querySelector(".controls");
 
-display = controls.previousElementSibling;
+// display = controls.previousElementSibling;
 
-console.log(display);
+// console.log(display);
 
-// To create an element 
+// // To create an element 
 
-const div = document.createElement("div");
-
-
-container.insertBefore(div, display);
-container.appendChild(div);
+// const div = document.createElement("div");
 
 
-let removed = container.removeChild(div);
+// container.insertBefore(div, display);
+// container.appendChild(div);
 
-console.log(removed);
+
+// let removed = container.removeChild(div);
+
+// console.log(removed);
 
 function removeEveryOther(arr){
   return arr.filter(function(_, index) {
@@ -5680,121 +5680,174 @@ return arr.filter((_, index) => index % 2 === 0);
 Dom manipulation
 */ 
 
-const container1 = document.querySelector("#container");
+// const container1 = document.querySelector("#container");
 
-// const display1 = document.querySelector(".display");
+// // const display1 = document.querySelector(".display");
 
-// const display1 = container1.querySelector(".display");
+// // const display1 = container1.querySelector(".display");
 
-const display1 = container.firstElementChild;
-const controls1 = document.querySelector(".controls");
-const display2 = controls.previousElementSibling;
-console.log(container1);
-console.log(display1);
+// const display1 = container.firstElementChild;
+// const controls1 = document.querySelector(".controls");
+// const display2 = controls.previousElementSibling;
+// console.log(container1);
+// console.log(display1);
 
-console.log(display2);
+// console.log(display2);
 
-const division = document.createElement("div");
+// const division = document.createElement("div");
 
-// container.appendChild(division);
+// // container.appendChild(division);
 
-container.insertBefore(division, display);
+// container.insertBefore(division, display);
 
-const removedChild = container.removeChild(division);
+// const removedChild = container.removeChild(division);
 
-console.log(division);
-container.insertBefore(div, controls);
-// Altering elements:
-// Adding Inline styles:
-// Add the indicated style rule to the element in the div variable 
-div.style.color = "blue";
-div.textContent = "Hello, my favorite color is blue";
+// console.log(division);
+// container.insertBefore(div, controls);
+// // Altering elements:
+// // Adding Inline styles:
+// // Add the indicated style rule to the element in the div variable 
+// div.style.color = "blue";
+// div.textContent = "Hello, my favorite color is blue";
 
-// adds several style rules:
+// // adds several style rules:
 
-div.style.cssText = "color: blue; background: pink;";
+// div.style.cssText = "color: blue; background: pink;";
 
-// adds several style rules: 
+// // adds several style rules: 
 
-div.setAttribute("style", "color: red; background: cyan; text-transform: uppercase;");
+// div.setAttribute("style", "color: red; background: cyan; text-transform: uppercase;");
 
-// dot notation with kebab case: doesn't work as it attempts to subtract color from div.style.background
-// equivalent to : div.style.background -color
-// div.style.background-color;
+// // dot notation with kebab case: doesn't work as it attempts to subtract color from div.style.background
+// // equivalent to : div.style.background -color
+// // div.style.background-color;
 
-// dot notation with camelCase: works, access the div's background-color style
+// // dot notation with camelCase: works, access the div's background-color style
 
-div.style.backgroundColor;
+// div.style.backgroundColor;
 
-// bracket notation with kebab-case: also works
-div.style["background-color"];
+// // bracket notation with kebab-case: also works
+// div.style["background-color"];
 
-// bracket notatin with camelCase: also works
+// // bracket notatin with camelCase: also works
 
-div.style["backgroundColor"];
-console.log(div);
-
-
-// Adding inline style:
-
-// adds the indicated style rule to the element in the div variable
-
-div.style.color = "red";
-
-div.style.cssText = "color:blue; background:blue; listStyle:none;";
-
-div.setAttribute("style", "color: red; backgroundColor: cyan;");
+// div.style["backgroundColor"];
+// console.log(div);
 
 
-div.style.backgroundColor;
+// // Adding inline style:
 
-div.style["background-color"];
+// // adds the indicated style rule to the element in the div variable
 
-div.style["backgroundColor"];
+// div.style.color = "red";
 
+// div.style.cssText = "color:blue; background:blue; listStyle:none;";
 
-
-// Editing attributes
-
-div.setAttribute("id", "theDiv");
-
-const id = div.getAttribute("id");
-
-console.log(id);
-
-// Remove specified attributes:
-
-div.removeAttribute("id");
-
-// working with classes
-
-// adds class "new" to your new div
-
-div.classList.add("new");
-
-// removes "new class from div
-
-div.classList.remove("new");
-
-// if div doesn't have a class 
-// "active" then add it otherwise remove it
-
-div.classList.toggle("active");
-
-// It is often standard (and cleaner) to toggle a CSS style rather than adding and removing inline CSS.
+// div.setAttribute("style", "color: red; backgroundColor: cyan;");
 
 
-// Adding text content:
+// div.style.backgroundColor;
 
-// creates a text node containing 'hello world!" and insert it in div"
+// div.style["background-color"];
 
-div.textContent = "Hello, World!";
+// div.style["backgroundColor"];
 
 
-// Adding HTML content
 
-// renders the HTML inside div
-div.innerHTML = "<h1>Hello World!</h1>"
+// // Editing attributes
+
+// div.setAttribute("id", "theDiv");
+
+// const id = div.getAttribute("id");
+
+// console.log(id);
+
+// // Remove specified attributes:
+
+// div.removeAttribute("id");
+
+// // working with classes
+
+// // adds class "new" to your new div
+
+// div.classList.add("new");
+
+// // removes "new class from div
+
+// div.classList.remove("new");
+
+// // if div doesn't have a class 
+// // "active" then add it otherwise remove it
+
+// div.classList.toggle("active");
+
+// // It is often standard (and cleaner) to toggle a CSS style rather than adding and removing inline CSS.
+
+
+// // Adding text content:
+
+// // creates a text node containing 'hello world!" and insert it in div"
+
+// div.textContent = "Hello, World!";
+
+
+// // Adding HTML content
+
+// // renders the HTML inside div
+// div.innerHTML = "<h1>Hello World!</h1>"
+
+const container = document.querySelector("#container");
+const content = document.createElement("div");
+
+content.classList.add("content");
+
+content.innerText = "This is the glorious text-content.";
+
+container.appendChild(content);
+
+const para = document.createElement("p");
+const h3 = document.createElement("h3");
+para.textContent = "Hey I'm red";
+para.style.color = "red";
+h3.textContent = "I'm blue h3!";
+h3.style.cssText = "color: blue;"
+
+// create a div
+
+const divBlack = document.createElement("div");
+
+divBlack.style.cssText = "border: 2px solid black; backgroundColor: pink;";
+
+const h1 = document.createElement("h1");
+const p = document.createElement("p");
+
+h1.textContent = "I'm in a div";
+p.textContent = "me too!";
+p.setAttribute("style", "textTransform: uppercase");
+
+divBlack.appendChild(h1);
+divBlack.appendChild(p);
+
+//method 2
+// const btn = document.querySelector("#btn");
+// btn.onclick = () => console.log("Hello, World!");
+// method 3
+const btn = document.querySelector("#btn");
+
+// btn.addEventListener("click", () => alert(`Hello World`));
+
+btn.addEventListener("click", function(e){
+    console.log(e.target);
+})
+
+btn.addEventListener("click", function(e) {
+    e.target.style.backgroundColor = "blue";
+})
+
+container.appendChild(para);
+container.insertBefore(h3, para);
+container.appendChild(divBlack);
+console.log(container);
 
 
 
