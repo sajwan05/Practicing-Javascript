@@ -5832,23 +5832,62 @@ divBlack.appendChild(p);
 // const btn = document.querySelector("#btn");
 // btn.onclick = () => console.log("Hello, World!");
 // method 3
+// const btn = document.querySelector("#btn");
+
+// // btn.addEventListener("click", () => alert(`Hello World`));
+
+// btn.addEventListener("click", function(e){
+//     console.log(e.target);
+// })
+
+// btn.addEventListener("click", function(e) {
+//     e.target.style.backgroundColor = "blue";
+// })
+
+// container.appendChild(para);
+// container.insertBefore(h3, para);
+// container.appendChild(divBlack);
+// console.log(container);
+
+// const button = document.querySelector(".color-change");
+
+// const divColor = document.querySelector(".button-color");
+
+// // console.log(divColor);
+// divColor.setAttribute("style", "border: 2px solid black; min-height: 100px; width:100%; backgroundColor: blue;text-align: center;line-height:100px;");
+
+// button.style.cssText = "display: inline-block; padding:1em; border-radius:12px;";
+
+
+
+// function random(number) {
+//     return Math.floor(Math.random() * (number + 1));
+// }
+
+
+// function bgChange(e) {
+//     const rndCol = `rgb(${random(255)} ${random(255)} ${random(255)})`;
+
+//     e.style.target.backgroundColor = rndCol;
+
+//     console.log(e);
+// }
+
+// button.addEventListener("click", bgChange);
+
 const btn = document.querySelector("#btn");
+btn.setAttribute("style", "padding:1em .5em; border-radius:12px; text-transform:uppercase; font-size: 1.23rem; margin-block:1rem; font-weight:bold; cursor: pointer;")
 
-// btn.addEventListener("click", () => alert(`Hello World`));
+btn.addEventListener("click", backGroundChange);
 
-btn.addEventListener("click", function(e){
-    console.log(e.target);
-})
+function random(num) {
+    return Math.floor(Math.random()* (num + 1));
+}
 
-btn.addEventListener("click", function(e) {
-    e.target.style.backgroundColor = "blue";
-})
+function backGroundChange(e) {
+    const randomColor = `rgb(${random(255)} ${random(255)} ${random(255)})`;
 
-container.appendChild(para);
-container.insertBefore(h3, para);
-container.appendChild(divBlack);
-console.log(container);
-
-
+    e.target.style.backgroundColor = randomColor;
+}
 
 
