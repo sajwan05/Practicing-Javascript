@@ -5886,10 +5886,24 @@ function random(num) {
     return Math.floor(Math.random()* (num + 1));
 }
 
+
 function backGroundChange(e) {
     const randomColor = `rgb(${random(255)} ${random(255)} ${random(255)})`;
 
     e.target.style.backgroundColor = randomColor;
+    // console.log(e);
+    // console.log(e.target);
 }
+
+// btn.onclick = _ => alert("Hello, World");
+
+
+// Attaching event listener to group of nodes
+
+const buttons = document.querySelectorAll(".container  button");
+
+buttons.forEach((btn) => btn.addEventListener("click", () => console.log(btn.id)));
+
+
 
 
