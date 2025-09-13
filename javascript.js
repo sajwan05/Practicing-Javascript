@@ -5874,7 +5874,9 @@ divBlack.appendChild(p);
 // }
 
 // button.addEventListener("click", bgChange);
+const body = document.querySelector("body");
 
+body.addEventListener("mousemove", backGroundChange);
 const btn = document.querySelector("#btn");
 btn.setAttribute("style", "padding:1em .5em; border-radius:12px; text-transform:uppercase; font-size: 1.23rem; margin-block:1rem; font-weight:bold; cursor: pointer;")
 
