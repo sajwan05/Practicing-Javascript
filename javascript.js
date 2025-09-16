@@ -6057,21 +6057,76 @@ btn.dispatchEvent(clickEvent);
 
 // highlight(list, addBorder);
 
-function highlight (element, callback) {
-    element.style.backgroundColor = "cyan";
+// function highlight (element, callback) {
+//     element.style.backgroundColor = "cyan";
 
-    if (callback && typeof callback === 'function') {
-        callback(element);
-    }
+//     if (callback && typeof callback === 'function') {
+//         callback(element);
+//     }
+// }
+
+// const menu = document.querySelector("#menu");
+// const container = document.querySelector(".container");
+
+// function addborder (element) {
+//     element.style.border = "4px solid black";
+// }
+
+
+// highlight(container, addborder);
+// highlight(menu, addborder);
+
+// Creating Javascript Custom events:
+
+
+// let event = new CustomEvent(eventType, options)
+
+// Following example shows how to create a new cutom event called mark: 
+
+// let event = new CustomEvent('mark', {
+//     detail: {backgroundColor: `yellow`}
+// });
+
+// // Dispatching Javascript custom events 
+
+// domElement.dispatchEvent(event);
+
+// Javascript custom event example:
+
+function highlight(element) {
+    const bgColor = `cyan`;
+    element.style.backgroundColor = bgColor;
+
+    // Create the event 
+
+    let event = new CustomEvent('mark', {
+        detail: {
+            backgroundColor:bgColor
+        }
+    });
+
+
+    // dispatch the event;
+
+    element.dispatchEvent(event);
 }
 
-const menu = document.querySelector("#menu");
-const container = document.querySelector(".container");
+const list = document.querySelector("#menu");
 
-function addborder (element) {
-    element.style.border = "4px solid black";
+function addborder(elem) {
+    elem.style.border = "5px solid hotpink";
 }
 
+// Listen to the highlight event
 
-highlight(container, addborder);
-highlight(menu, addborder);
+list.addEventListener('mark', function(e){
+    addborder(this);
+
+    // examine the background
+
+    console.log(e.detail);
+});
+
+highlight(list)
+
+
