@@ -6130,3 +6130,41 @@ list.addEventListener('mark', function(e){
 highlight(list)
 
 
+const link = document.querySelector("a");
+
+link.textContent = "Mozilla Developer Network";
+
+link.href = "https://developer.mozilla.org";
+
+// Creating and placing new nodes:
+
+const sec = document.querySelector("section");
+
+// Now let's create a new paragraph
+
+const para = document.createElement("p");
+para.textContent = "We hope you enjoyed the ride.";
+
+sec.appendChild(para);
+
+const text = document.createTextNode(
+    " - the premier source for web development knowledge.",);
+
+const linkPara = document.querySelector("p");
+linkPara.appendChild(text);
+
+sec.appendChild(linkPara);
+
+sec.removeChild(linkPara);
+
+sec.appendChild(linkPara);
+
+linkPara.remove();
+
+sec.appendChild(linkPara);
+
+// But in older browser 
+
+linkPara.parentNode.removeChild(linkPara);
+
+
