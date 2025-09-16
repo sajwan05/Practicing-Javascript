@@ -5968,24 +5968,24 @@ report.addEventListener("click", (e) => console.log(`Report menu item was clicke
 // Instead of having multiple event handlers, you can assign a single event handler to handle all the click events:
 
 // To solve this issue, you can leverage the event bubbling.
-const menu = document.querySelector("#menu");
+// const menu = document.querySelector("#menu");
 
-menu.addEventListener("click", (e) => {
-    let target = e.target;
+// menu.addEventListener("click", (e) => {
+//     let target = e.target;
     
-    switch(target.id) {
-        case 'home' :
-            console.log(`Home menu item was clicked`);
-            break;
-        case 'dashboard':
-            console.log('Dashboard menu item was clicked');
-            break;
+//     switch(target.id) {
+//         case 'home' :
+//             console.log(`Home menu item was clicked`);
+//             break;
+//         case 'dashboard':
+//             console.log('Dashboard menu item was clicked');
+//             break;
 
-        case 'report':
-            console.log(`Report menu item was clicked`);
-            break;
-    }
-});
+//         case 'report':
+//             console.log(`Report menu item was clicked`);
+//             break;
+//     }
+// });
 
 // Javascript dispatch event:
 
@@ -6042,18 +6042,36 @@ btn.dispatchEvent(clickEvent);
 
 // The following code calls the highlight()  function and adds a border to a <ul> element:
 
-function highlight(elem, callback) {
-    elem.style.backgroundColor = `yellow`;
+// function highlight(elem, callback) {
+//     elem.style.backgroundColor = `yellow`;
 
-    if (callback && typeof callback === "function"){
-        callback(elem);
+//     if (callback && typeof callback === "function"){
+//         callback(elem);
+//     }
+// }
+
+// let list = document.querySelector("#menu");
+// function addBorder(elem) {
+//     elem.style.border = "3px solid red";
+// }
+
+// highlight(list, addBorder);
+
+function highlight (element, callback) {
+    element.style.backgroundColor = "cyan";
+
+    if (callback && typeof callback === 'function') {
+        callback(element);
     }
 }
 
-let list = document.querySelector("#menu");
-function addBorder(elem) {
-    elem.style.border = "3px solid red";
+const menu = document.querySelector("#menu");
+const container = document.querySelector(".container");
+
+function addborder (element) {
+    element.style.border = "4px solid black";
 }
 
-highlight(list, addBorder);
 
+highlight(container, addborder);
+highlight(menu, addborder);
