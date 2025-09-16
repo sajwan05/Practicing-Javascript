@@ -5950,3 +5950,18 @@ button.addEventListener("click", () => alert("Click using arrow function"));
 
 button.addEventListener("click", (event) => console.log(event.bubbles));
 
+// Introduction to JavaScript Event Delegation 
+
+// To handle the click event of each menu item, you may add the corresponding click event handler
+
+const home = document.querySelector("#home");
+const dashboard = document.querySelector("#dashboard");
+const report = document.querySelector("#report");
+
+home.addEventListener("click", (event) => console.log(`Home menu item was clicked `));
+
+dashboard.addEventListener("click", (e) => console.log(`Dashboard menu was clicked`));
+
+
+report.addEventListener("click", (e) => console.log(`Report menu item was clicked`));
+
