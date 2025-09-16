@@ -5934,3 +5934,19 @@ button.addEventListener("click", function() {
 // Altenatively we can also use arrow function
 
 button.addEventListener("click", () => alert("Click using arrow function"));
+
+
+// Event flow:
+
+// Event bubbling:
+
+// Event capturing 
+
+// DOM level 2 event flow
+
+// Event object 
+
+// When the event occurs, the web browser passes an Event Object to the event handler:
+
+button.addEventListener("click", (event) => console.log(event.bubbles));
+
