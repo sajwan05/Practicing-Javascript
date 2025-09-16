@@ -5924,4 +5924,13 @@ function display() {
 // register the event handler
 button.addEventListener("click", display);
 
+// shorter way to register an event handler is to place all code in an anonymous function 
 
+
+button.addEventListener("click", function() {
+    alert("Wohoo button is clicked and event handler is registered using anonymous function");
+});
+
+// Altenatively we can also use arrow function
+
+button.addEventListener("click", () => alert("Click using arrow function"));
