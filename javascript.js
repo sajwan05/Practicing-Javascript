@@ -5965,3 +5965,25 @@ dashboard.addEventListener("click", (e) => console.log(`Dashboard menu was click
 
 report.addEventListener("click", (e) => console.log(`Report menu item was clicked`));
 
+// Instead of having multiple event handlers, you can assign a single event handler to handle all the click events:
+
+// To solve this issue, you can leverage the event bubbling.
+const menu = document.querySelector("#menu");
+
+menu.addEventListener("click", (e) => {
+    let target = e.target;
+    
+    switch(target.id) {
+        case 'home' :
+            console.log(`Home menu item was clicked`);
+            break;
+        case 'dashboard':
+            console.log('Dashboard menu item was clicked');
+            break;
+
+        case 'report':
+            console.log(`Report menu item was clicked`);
+            break;
+    }
+});
+
