@@ -5796,37 +5796,37 @@ Dom manipulation
 // // renders the HTML inside div
 // div.innerHTML = "<h1>Hello World!</h1>"
 
-const container = document.querySelector("#container");
-const content = document.createElement("div");
+// const container = document.querySelector("#container");
+// const content = document.createElement("div");
 
-content.classList.add("content");
+// content.classList.add("content");
 
-content.innerText = "This is the glorious text-content.";
+// content.innerText = "This is the glorious text-content.";
 
-container.appendChild(content);
+// container.appendChild(content);
 
-const para = document.createElement("p");
-const h3 = document.createElement("h3");
-para.textContent = "Hey I'm red";
-para.style.color = "red";
-h3.textContent = "I'm blue h3!";
-h3.style.cssText = "color: blue;"
+// const para = document.createElement("p");
+// const h3 = document.createElement("h3");
+// para.textContent = "Hey I'm red";
+// para.style.color = "red";
+// h3.textContent = "I'm blue h3!";
+// h3.style.cssText = "color: blue;"
 
-// create a div
+// // create a div
 
-const divBlack = document.createElement("div");
+// const divBlack = document.createElement("div");
 
-divBlack.style.cssText = "border: 2px solid black; backgroundColor: pink;";
+// divBlack.style.cssText = "border: 2px solid black; backgroundColor: pink;";
 
-const h1 = document.createElement("h1");
-const p = document.createElement("p");
+// const h1 = document.createElement("h1");
+// const p = document.createElement("p");
 
-h1.textContent = "I'm in a div";
-p.textContent = "me too!";
-p.setAttribute("style", "textTransform: uppercase");
+// h1.textContent = "I'm in a div";
+// p.textContent = "me too!";
+// p.setAttribute("style", "textTransform: uppercase");
 
-divBlack.appendChild(h1);
-divBlack.appendChild(p);
+// divBlack.appendChild(h1);
+// divBlack.appendChild(p);
 
 //method 2
 // const btn = document.querySelector("#btn");
@@ -5874,36 +5874,54 @@ divBlack.appendChild(p);
 // }
 
 // button.addEventListener("click", bgChange);
-const body = document.querySelector("body");
+// const body = document.querySelector("body");
 
-body.addEventListener("mousemove", backGroundChange);
-const btn = document.querySelector("#btn");
-btn.setAttribute("style", "padding:1em .5em; border-radius:12px; text-transform:uppercase; font-size: 1.23rem; margin-block:1rem; font-weight:bold; cursor: pointer;")
+// body.addEventListener("mousemove", backGroundChange);
+// const btn = document.querySelector("#btn");
+// btn.setAttribute("style", "padding:1em .5em; border-radius:12px; text-transform:uppercase; font-size: 1.23rem; margin-block:1rem; font-weight:bold; cursor: pointer;")
 
-btn.addEventListener("click", backGroundChange);
+// btn.addEventListener("click", backGroundChange);
 
-function random(num) {
-    return Math.floor(Math.random()* (num + 1));
+// function random(num) {
+//     return Math.floor(Math.random()* (num + 1));
+// }
+
+
+// function backGroundChange(e) {
+//     const randomColor = `rgb(${random(255)} ${random(255)} ${random(255)})`;
+
+//     e.target.style.backgroundColor = randomColor;
+//     // console.log(e);
+//     // console.log(e.target);
+// }
+
+// // btn.onclick = _ => alert("Hello, World");
+
+
+// // Attaching event listener to group of nodes
+
+// const buttons = document.querySelectorAll(".container  button");
+
+// buttons.forEach((btn) => btn.addEventListener("click", () => console.log(btn.id)));
+
+
+
+// const buttons = document.querySelectorAll("button");
+
+// buttons.forEach((button) => {
+//     button.addEventListener("click", () => {
+//         alert(button.id);
+//     });
+// });
+
+const button = document.querySelector("#btn");
+
+// Event handler
+function display() {
+    alert("Button is clicked");
 }
 
-
-function backGroundChange(e) {
-    const randomColor = `rgb(${random(255)} ${random(255)} ${random(255)})`;
-
-    e.target.style.backgroundColor = randomColor;
-    // console.log(e);
-    // console.log(e.target);
-}
-
-// btn.onclick = _ => alert("Hello, World");
-
-
-// Attaching event listener to group of nodes
-
-const buttons = document.querySelectorAll(".container  button");
-
-buttons.forEach((btn) => btn.addEventListener("click", () => console.log(btn.id)));
-
-
+// register the event handler
+button.addEventListener("click", display);
 
 
