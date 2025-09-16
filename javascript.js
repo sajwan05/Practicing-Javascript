@@ -6038,4 +6038,22 @@ let clickEvent = new MouseEvent("click", {
 btn.dispatchEvent(clickEvent);
 // console.log(event.isTrusted);
 
+// Introduction to JavaScript custom events:
+
+// The following code calls the highlight()  function and adds a border to a <ul> element:
+
+function highlight(elem, callback) {
+    elem.style.backgroundColor = `yellow`;
+
+    if (callback && typeof callback === "function"){
+        callback(elem);
+    }
+}
+
+let list = document.querySelector("#menu");
+function addBorder(elem) {
+    elem.style.border = "3px solid red";
+}
+
+highlight(list, addBorder);
 
