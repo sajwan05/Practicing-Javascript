@@ -6166,5 +6166,23 @@ sec.appendChild(linkPara);
 // But in older browser 
 
 linkPara.parentNode.removeChild(linkPara);
+// 
 
+
+// Spreading arrays :
+
+// [...a, ...b]
+
+// This takes all the elements of array a and array b and puts them into one new array:
+
+const aa = [1, 3];
+const b = [4, 2];
+
+const array = [...aa, ...b];
+
+array.sort((a, b) => a - b);
+
+const newArr = array.filter((item, i) => i === array.indexOf(item));
+
+console.log(newArr);
 
