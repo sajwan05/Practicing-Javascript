@@ -6355,7 +6355,24 @@ circle2["location"] = {x: 1, y: 1, z: 3};
 
 delete circle2.location;
 
+// Enumerating properties
 
+// for in loop for objects specifically :
+
+for (let key in circle2) {
+    if (typeof circle2[key] !== 'function')
+        console.log(key, circle2[key]);
+}
+
+// Other method to show all keys in array form
+
+
+const keys = Object.keys(circle2);
+
+console.log(keys);
+
+if ("radius" in circle2)
+    console.log('Circle has a radius');
 
 
 
