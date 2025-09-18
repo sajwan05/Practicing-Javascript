@@ -6381,20 +6381,73 @@ console.log(totalSalary);
 function Circle(radius) {
     this.radius = radius;
 
-    let location = {x: 0, y: 0};
+    let defaultlocation = {x: 0, y: 0};
 
-    let computeOptimumLocation = function () {
-        //...
+    this.getDefaultLocation = function() {
+        return defaultlocation;
     }
 
     this.draw = function () {
-        computeOptimumLocation();
         console.log(`Draw`);
     };
+
+    Object.defineProperty(this, 'defaultlocation',{
+        get: function() {
+            return defaultlocation;
+        },
+        set:function(value) {
+            if(!value.x || !value.y)
+                throw new Error('Invalid location.')
+
+            defaultlocation = value;
+        }
+    });
 }
 
 const circle = new Circle(10);
 circle.draw();
+circle.defaultlocation;
+
+function Stopwatch() {
+    let startTime, endTime, running, duration = 0;
+
+
+    this.start = function () {
+        if (running) 
+            throw new Error("Stopwatch is already running!");
+
+        running = true;
+        startTime = new Date();
+    }
+
+    this.stop = function () {
+        if (!running)
+            throw new Error("Stopwatch is not started!");
+
+        running = false;
+
+        endTime = new Date();
+
+        const seconds = (endTime.getTime() -startTime.getTime())/ 1000;
+
+        duration += seconds;
+    };
+
+    this.reset = function () {
+        startTime = null;
+        endTime = null;
+        running = false;
+        duration = 0;
+    };
+
+    Object.defineProperty(this, 'duration', {
+        get: function () {
+            return duration;
+        }
+    })
+}
+
+const sw = new Stopwatch();
 
 
 
