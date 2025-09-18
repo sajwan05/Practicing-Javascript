@@ -6023,19 +6023,19 @@ report.addEventListener("click", (e) => console.log(`Report menu item was clicke
 
 // Element.dispatchEvent(event);
 
-const btn = document.querySelector("#dispatch");
+// const btn = document.querySelector("#dispatch");
 
-btn.addEventListener("click", (e)=> alert('Mouse clicked'));
+// btn.addEventListener("click", (e)=> alert('Mouse clicked'));
 
-// let clickEvent = new Event("click");
+// // let clickEvent = new Event("click");
 
-let clickEvent = new MouseEvent("click", {
-    bubbles: true,
-    cancelable: true,
-    clientX: 150,
-    clientY: 150
-});
-btn.dispatchEvent(clickEvent);
+// let clickEvent = new MouseEvent("click", {
+//     bubbles: true,
+//     cancelable: true,
+//     clientX: 150,
+//     clientY: 150
+// });
+// btn.dispatchEvent(clickEvent);
 // console.log(event.isTrusted);
 
 // Introduction to JavaScript custom events:
@@ -6226,3 +6226,38 @@ const Employee = {
 const totalSalary = Employee.getWage();
 
 console.log(totalSalary);
+
+// Benifits of oop
+
+// Encapsulation : Reduce complexity + increase reusability
+
+// Abstraction : Reduce complexity + isolate impact of changes
+
+// Inheritance: Eliminate redundant code 
+
+// Polymorphism: Refactor ugly switch/case statements
+
+// Objects 
+
+
+// const circle = {}; Object literal
+// Object in js is essentially collection of key value pair
+
+const circle = {
+    radius: 1,
+    location: {
+        x: 1,
+        y: 1
+    },
+
+    draw: function() {
+        console.log("draw");
+    },
+};
+
+// we can access its properties with dot and bracket notation:
+
+console.log(circle.radius);
+
+circle.draw();
+
