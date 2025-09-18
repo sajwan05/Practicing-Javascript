@@ -6186,3 +6186,43 @@ const newArr = array.filter((item, i) => i === array.indexOf(item));
 
 console.log(newArr);
 
+
+// Object Oriented Programming:
+
+// Procedural programming we have function and variable and it get executed line by line
+
+// object oriented programming :
+// in object oriented programming we put these variable and function in an object and these variable and functions are called property and methods respectively
+
+// OOP has 4 pillar -
+// Encapsulation Abstraction polymorphism and Inheritance
+
+// Encapsulation example:
+
+// Procedural way to solve :
+let baseSalary = 30_000;
+let overtime = 10;
+let rate = 20;
+
+function getWage(baseSalary, overtime, rate) {
+    return baseSalary + (overtime * rate);
+}
+
+// console.log(getWage(baseSalary, overtime, rate));
+
+// Object Oriented way
+
+const Employee = {
+    baseSalary : 30000,
+    overtime: 10,
+    overtimeRate: 20,
+
+    getWage() {
+        
+    return this.baseSalary + (this.overtime * this.overtimeRate);
+    },
+}
+
+const totalSalary = Employee.getWage();
+
+console.log(totalSalary);
