@@ -6243,136 +6243,159 @@ console.log(totalSalary);
 // const circle = {}; Object literal
 // Object in js is essentially collection of key value pair
 
-const circle = {
-    radius: 1,
-    location: {
-        x: 1,
-        y: 1
-    },
+// const circle = {
+//     radius: 1,
+//     location: {
+//         x: 1,
+//         y: 1
+//     },
 
-    draw: function() {
-        console.log("draw");
-    },
-};
+//     draw: function() {
+//         console.log("draw");
+//     },
+// };
 
-// we can access its properties with dot and bracket notation:
+// // we can access its properties with dot and bracket notation:
 
-// console.log(circle.radius);
+// // console.log(circle.radius);
 
-// circle.draw();
+// // circle.draw();
 
-// Factory method to create objects 
-
-
-
-function createCircle(radius) {
-    return {
-        radius,
-        draw: function() {
-            console.log('draw');
-        }
-    }
-}
-
-const circle1 = createCircle(1);
-
-console.log(circle1.radius);
-circle1.draw();
-
-
-// Constructor function
-
-function Circle(radius) {
-    this.radius = radius,
-
-    this.draw = function() {
-        console.log('draw');
-    }
-}
-
-const another = new Circle(1);
-
-console.log(another.radius);
-another.draw();
+// // Factory method to create objects 
 
 
 
-// Constructor property:
-// Except Constructor function all other objects we create are created under the hood using Object() Constructor by javascript
+// function createCircle(radius) {
+//     return {
+//         radius,
+//         draw: function() {
+//             console.log('draw');
+//         }
+//     }
+// }
 
-// Functions are Objects :
+// const circle1 = createCircle(1);
 
-// Value Types and Reference Types:
+// console.log(circle1.radius);
+// circle1.draw();
 
-// Value types - premitives
-// Reference types - objects, arr, f
 
-// Primitives are pass by value and that's why they are also independent of each other
-let x = 10;
-let y = x;
+// // Constructor function
 
-x = 39;
+// function Circle(radius) {
+//     this.radius = radius,
 
-// Pass by reference 
+//     this.draw = function() {
+//         console.log('draw');
+//     }
+// }
 
-let a = {value: 10};
+// const another = new Circle(1);
 
-let b = a;
+// console.log(another.radius);
+// another.draw();
 
- b.value = 20;
 
- number = 10;
 
- function increase(number) {
-   number++
-   return number;
- }
+// // Constructor property:
+// // Except Constructor function all other objects we create are created under the hood using Object() Constructor by javascript
 
-let res = increase(10);
-console.log(res);
- console.log(number);
+// // Functions are Objects :
 
-//  obj = {value: 10};
-//  function increase(obj) {
-//    obj.value++
+// // Value Types and Reference Types:
+
+// // Value types - premitives
+// // Reference types - objects, arr, f
+
+// // Primitives are pass by value and that's why they are also independent of each other
+// let x = 10;
+// let y = x;
+
+// x = 39;
+
+// // Pass by reference 
+
+// let a = {value: 10};
+
+// let b = a;
+
+//  b.value = 20;
+
+//  number = 10;
+
+//  function increase(number) {
+//    number++
+//    return number;
 //  }
 
-//  increase(obj);
-//  console.log(obj.value);
+// let res = increase(10);
+// console.log(res);
+//  console.log(number);
+
+// //  obj = {value: 10};
+// //  function increase(obj) {
+// //    obj.value++
+// //  }
+
+// //  increase(obj);
+// //  console.log(obj.value);
 
 
-// Adding and removing properties:
+// // Adding and removing properties:
 
-console.log(another);
+// console.log(another);
 
-const circle2 = new Circle(10);
+// const circle2 = new Circle(10);
 
-circle2.location = {x: 1, y: 1};
+// circle2.location = {x: 1, y: 1};
 
-circle2["location"] = {x: 1, y: 1, z: 3};
+// circle2["location"] = {x: 1, y: 1, z: 3};
 
-// Delete
+// // Delete
 
-delete circle2.location;
+// delete circle2.location;
 
-// Enumerating properties
+// // Enumerating properties
 
-// for in loop for objects specifically :
+// // for in loop for objects specifically :
 
-for (let key in circle2) {
-    if (typeof circle2[key] !== 'function')
-        console.log(key, circle2[key]);
+// for (let key in circle2) {
+//     if (typeof circle2[key] !== 'function')
+//         console.log(key, circle2[key]);
+// }
+
+// // Other method to show all keys in array form
+
+
+// const keys = Object.keys(circle2);
+
+// console.log(keys);
+
+// if ("radius" in circle2)
+//     console.log('Circle has a radius');
+
+// Abstraction:
+
+// Constructor method to create object
+
+function Circle(radius) {
+    this.radius = radius;
+
+    let location = {x: 0, y: 0};
+
+    let computeOptimumLocation = function () {
+        //...
+    }
+
+    this.draw = function () {
+        computeOptimumLocation();
+        console.log(`Draw`);
+    };
 }
 
-// Other method to show all keys in array form
+const circle = new Circle(10);
+circle.draw();
 
-
-const keys = Object.keys(circle2);
-
-console.log(keys);
-
-if ("radius" in circle2)
-    console.log('Circle has a radius');
 
 
 
