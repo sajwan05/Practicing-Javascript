@@ -5443,9 +5443,9 @@ function removeAtIndexCopy (array, index) {
     concat(array.slice(index + 1));
 }
 
-const a = [2, 3, 4, 5, 6, 56,7,8,8];
+// const a = [2, 3, 4, 5, 6, 56,7,8,8];
 
-console.log(removeAtIndexCopy(a, a.length - 1));
+// console.log(removeAtIndexCopy(a, a.length - 1));
 
 
 
@@ -6176,15 +6176,15 @@ linkPara.parentNode.removeChild(linkPara);
 // This takes all the elements of array a and array b and puts them into one new array:
 
 const aa = [1, 3];
-const b = [4, 2];
+// const b = [4, 2];
 
-const array = [...aa, ...b];
+// const array = [...aa, ...b];
 
-array.sort((a, b) => a - b);
+// array.sort((a, b) => a - b);
 
-const newArr = array.filter((item, i) => i === array.indexOf(item));
+// const newArr = array.filter((item, i) => i === array.indexOf(item));
 
-console.log(newArr);
+// console.log(newArr);
 
 
 // Object Oriented Programming:
@@ -6257,9 +6257,9 @@ const circle = {
 
 // we can access its properties with dot and bracket notation:
 
-console.log(circle.radius);
+// console.log(circle.radius);
 
-circle.draw();
+// circle.draw();
 
 // Factory method to create objects 
 
@@ -6277,5 +6277,89 @@ function createCircle(radius) {
 const circle1 = createCircle(1);
 
 console.log(circle1.radius);
-circle1.draw()
+circle1.draw();
+
+
+// Constructor function
+
+function Circle(radius) {
+    this.radius = radius,
+
+    this.draw = function() {
+        console.log('draw');
+    }
+}
+
+const another = new Circle(1);
+
+console.log(another.radius);
+another.draw();
+
+
+
+// Constructor property:
+// Except Constructor function all other objects we create are created under the hood using Object() Constructor by javascript
+
+// Functions are Objects :
+
+// Value Types and Reference Types:
+
+// Value types - premitives
+// Reference types - objects, arr, f
+
+// Primitives are pass by value and that's why they are also independent of each other
+let x = 10;
+let y = x;
+
+x = 39;
+
+// Pass by reference 
+
+let a = {value: 10};
+
+let b = a;
+
+ b.value = 20;
+
+ number = 10;
+
+ function increase(number) {
+   number++
+   return number;
+ }
+
+let res = increase(10);
+console.log(res);
+ console.log(number);
+
+//  obj = {value: 10};
+//  function increase(obj) {
+//    obj.value++
+//  }
+
+//  increase(obj);
+//  console.log(obj.value);
+
+
+// Adding and removing properties:
+
+console.log(another);
+
+const circle2 = new Circle(10);
+
+circle2.location = {x: 1, y: 1};
+
+circle2["location"] = {x: 1, y: 1, z: 3};
+
+// Delete
+
+delete circle2.location;
+
+
+
+
+
+
+
+
 
